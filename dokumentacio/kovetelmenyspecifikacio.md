@@ -26,9 +26,57 @@ Ezen felül nem alkalmazunk helymeghatározást a projektünk során. Ennek oka,
 
 ## Jelenlegi üzleti folyamatok modellje
 
+A projekt célja egy kibővített időjárásjelentő asztali alkalmazás, amely bizonyos szintig személyreszabható, és képes a felhasználók igényeinek megfelelően működni. Erősen dependens a Python programozási nyelven, illetve a TensorFlow adatbázisain, amelyeket a projekt során használni fogunk. A projekt során a csapat tagjai a következő főfeladatokat látják el:
+* TensorFlow adatbázisok tanulmányozása, adatok feldolgozása
+* Python programozási nyelv tanulmányozása, a projekt során használt modulok megismerése
+* Django keretrendszer tanulmányozása, a projekt során használt modulok megismerése
+* Predikció megvalósítása
+* Webes felület megvalósítása
+* Webes felület összekötése a predikció során létrehozott adatbázissal
+* Regisztrációs felület megvalósítása
+* Regisztráció lehetőségének megvalósítása
+* Bejelentkezés lehetőségének megvalósítása
+* Személyreszabhatóság lehetőségének megvalósítása
+A projekt egyéb feladatokat is tartalmazhat, amelyek a fentiekhez hasonlóak, és a projekt során merülnek fel. Bizonyos tervezett feladatok során ütközhetünk olyan problémákba, melyek befolyásolják a többi feladatot, így nem kizárt, hogy egyes felsorolt feladatok nem kerülnek megvalósításra, vagy a projekt során új feladatok merülnek fel.
+
+Az alkalmazás 1.0 verzió tervei a következők:
+| Verzió | Leírás                                  |
+|-------|----------------------------------------|
+| 1.0   | Alapvető funkcionalitások megvalósítása   |
+| 1.0   | Alapvető webes felület megvalósítása     |
+| 1.0   | Alapvető predikció megvalósítása         |
+| 1.0   | Alapvető regisztrációs felület megvalósítása |
+| 1.0   | Alapvető bejelentkezés lehetőségének megvalósítása |
+| 1.0   | Alapvető személyreszabhatóság lehetőségének megvalósítása |
+
+
 ## Igényelt üzleti folyamatok modellje
 
+Az alkalmazás munkálatait több verzióra bontjuk, ugyanis egy olyan projektet szeretnénk végigvinni, amely a csapat kapacitásához mérten bővíthető. Ezzel a tervezési folyamat rugalmasságát is biztosítani tudjuk, és szilárd alapot ad a kivitelezéshez. A verziókban történő bontás segít a csapatnak a munka megtervezésében, és a feladatok megvalósításában.
+
+Az 1.0 verzió az, amit mindenképpen szeretnénk megvalósítani, így külön szedjük az egyéb, felhasználói élményt javító fejlesztésektől.
+Az alkalmazás 1.0 verzió tervei a következők:
+| Verzió | Leírás                                  |
+|-------|----------------------------------------|
+| 1.0   | Alapvető funkcionalitások megvalósítása   |
+| 1.0   | Alapvető webes felület megvalósítása     |
+| 1.0   | Alapvető predikció megvalósítása         |
+| 1.0   | Alapvető regisztrációs felület megvalósítása |
+| 1.0   | Alapvető bejelentkezés lehetőségének megvalósítása |
+| 1.0   | Alapvető személyreszabhatóság lehetőségének megvalósítása |
+
+A 2.0 verzióban szeretnénk a felhasználói élményt bővíteni, olyan egyéb ötleteinket soroljuk ide, melyek megvalósítása nem befolyásolja a 1.0 verzió megvalósítását, de lehetőség szerint jelentősen bővíthetik a projektünk végeredményét.
+Az alkalmazás 2.0 verzió tervei a következők:
+| Verzió | Leírás                                  |
+|-------|----------------------------------------|
+| 2.0   | Személyreszabhatóság bővítése   |
+| 2.0   | Értesítő küldése kiválasztott napokról  |
+| 2.0   | Esetleges új design elemek a felületen  |
+
+
 ## Követelménylista
+
+
 
 ## Irányított és szabad szöveges riportok szövege
 
