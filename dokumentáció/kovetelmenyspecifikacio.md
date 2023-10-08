@@ -14,6 +14,12 @@ Az alkalmazás célja egy olyan rendszer, ami megbízható időjárás informác
 
 ## A rendszerre vonatkozó pályázat, törvények, rendeletek, szabványok és ajánlások felsorolása
 
+A rendszer a Szoftverfejlesztési Módszertanok tárgy követelményeinek kell, hogy megfeleljen.
+Néhány általános jogi követelmény a programmal szemben:
+* Szerzői jogok: A program nem szegheti meg mások szerzői jogait, és a használt forrásoknak meg kell felelnie a szoftverlicenc feltételeinek.
+* Szabályozási követelmények: A programnak meg kell felelnie azoknak a szabályozási követelményeknek, amelyek az adott iparágban vagy régióban érvényesek.
+* Hátrányos kódolás: A programnak nem szabad hátrányosan megkülönböztetnie embereket faj, vallás, nemzetiség vagy egyéb személyes jellemzők alapján.
+
 ## Jelenlegi üzleti folyamatok modellje
 
 ## Igényelt üzleti folyamatok modellje
@@ -24,4 +30,13 @@ Az alkalmazás célja egy olyan rendszer, ami megbízható időjárás informác
 
 ## Fogalomszótár
 
+Python - A Python egy általános célú, nagyon magas szintű programozási nyelv. A nyelv tervezési filozófiája az olvashatóságot és a programozói munka megkönnyítését helyezi előtérbe a futási sebességgel szemben.
+
+Django - A Django egy ingyenes és nyílt forráskódú, Python-alapú webes keretrendszer, amely a modell–sablon–nézet építészeti mintát követi.
+
 ## Pozitív felhasználói élmény biztosítása
+
+- Felhasználóbarát GUI:
+      - A grafika felhasználói felületnek könnyen használhatónak kell lennie
+      - Egyértelműség: a GUI-nak egyértelműnek kell lennie a félreértés elkerülése érdekében
+      - Ergonómikus kialakítás: a felhasználói felületnek olvashatónak, könnyen átláthatónak kell lennie felhasználói eszköztől függetlenül
