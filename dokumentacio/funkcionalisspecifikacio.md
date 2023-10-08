@@ -36,7 +36,7 @@ Néhány általános jogi követelmény a programmal szemben:
 
 ## Képernyő tervek
 
-![basic_figma](dokumentáció/basic_figma.png)
+![basic_figma](dokumentacio/basic_figma.png)
 
 ## Forgatókönyv
 
