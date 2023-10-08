@@ -37,6 +37,6 @@ Django - A Django egy ingyenes és nyílt forráskódú, Python-alapú webes ker
 ## Pozitív felhasználói élmény biztosítása
 
 - Felhasználóbarát GUI:
-      - A grafika felhasználói felületnek könnyen használhatónak kell lennie
-      - Egyértelműség: a GUI-nak egyértelműnek kell lennie a félreértés elkerülése érdekében
-      - Ergonómikus kialakítás: a felhasználói felületnek olvashatónak, könnyen átláthatónak kell lennie felhasználói eszköztől függetlenül
+    * A grafika felhasználói felületnek könnyen használhatónak kell lennie
+    * Egyértelműség: a GUI-nak egyértelműnek kell lennie a félreértés elkerülése érdekében
+    * Ergonómikus kialakítás: a felhasználói felületnek olvashatónak, könnyen átláthatónak kell lennie felhasználói eszköztől függetlenül
