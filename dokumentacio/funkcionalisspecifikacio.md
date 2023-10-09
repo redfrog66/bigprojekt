@@ -83,6 +83,21 @@ Az alkalmazás 2.0 verzió tervei a következők:
 
 ## Követelmény lista
 
+### Bejelentkezés
+Lehetőség van bejelentkezésre de nem kötelező, személyre szabási funkciók csak bejelentkezéssel érhetőek el.
+
+### Személyes hőérzet megadása
+Amennyiben a felhasználó úgy dönt a személyes hőérzetét megadhatja így az alapértelmezettől eltérő ruházat ajánlásban részesülhet.
+
+### Város megadása
+Város megadása a helyi időjárás megjelenítése érdekében.
+
+### Új város
+Város hozzáadása a mentett városokhoz
+
+### Mentett városok közötti választás
+Több várost meg lehet adni hogy egy kattintással lehessen váltani köztük.
+
 ## Fejlesztési Folyamat
 
 A projekt során a csapat tagjai a következő főfeladatokat látják el:
