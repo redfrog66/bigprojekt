@@ -142,6 +142,8 @@ Python - A Python egy általános célú, nagyon magas szintű programozási nye
 
 Django - A Django egy ingyenes és nyílt forráskódú, Python-alapú webes keretrendszer, amely a modell–sablon–nézet építészeti mintát követi.
 
+TensorFlow - A TensorFlow egy ingyenes és nyílt forráskódú szoftverkönyvtár gépi tanuláshoz és mesterséges intelligenciához.
+
 ## Pozitív felhasználói élmény biztosítása
 
 - Felhasználóbarát GUI:
