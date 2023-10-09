@@ -95,6 +95,15 @@ Város megadása a helyi időjárás megjelenítése érdekében.
 ### Új város
 Város hozzáadása a mentett városokhoz
 
+### Napi időjárás
+Adott nap részletesebb, órákra lebontott időjárási adatai biztosítása.
+
+### Hét napos előrejelzés
+Az elkövetkező hét nap időjárási predikciójának biztosítása.
+
+### Korábbi adatok
+Több évre visszamenően megtekinthető az adott nap hőmérsékleti adatai
+
 ### Mentett városok közötti választás
 Több várost meg lehet adni hogy egy kattintással lehessen váltani köztük.
 
