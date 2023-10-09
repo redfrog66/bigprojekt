@@ -127,6 +127,7 @@ Vendég Felhasználó (Guest): Vendég felhasználók az alkalmazásban nincsene
 ![basic_figma](assets/basic_figma.png)
 
 ## Forgatókönyv
+A felhasználó megadja a várost amiben tartózkodik, ezután a program kiírja az arra a városra vonatkozó időjárást és ajánl egy öltözetet.
 
 ## Funkció - követelmény megfeleltetés 
 
