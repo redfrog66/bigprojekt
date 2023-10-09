@@ -6,19 +6,19 @@ Egy időjárás jelentésre alkalmas webapplikáció, melyhez Pythont, Django-t 
 
 ## Csapattagok
 
-- [Gellén Rebeka]()
-- [Kósa Fruzsina]()
-- [Dinó Ákos]()
-- [Bukta Ádám]()
+- [Gellén Rebeka](https://github.com/redfrog66)
+- [Kósa Fruzsina](https://github.com/kosafruzsina)
+- [Dinó Ákos](https://github.com/dinoakos)
+- [Bukta Ádám](https://github.com/AdamBukta)
 
 ## Trello
 
-- [Trello]()
+- [Trello](https://trello.com/b/cnpETWIr/bigproject)
 
 ## Excel
 
-- [Excel]()
+- [Excel](http://tinyurl.com/szfm2310)
 
 ## Oktató anyagai
 
-- [Anyagok]()
+- [Anyagok](https://aries.ektf.hu/~tajti/szfm.html)
