@@ -87,6 +87,9 @@ Város megadása a helyi időjárás megjelenítése érdekében.
 ### Új város
 Város hozzáadása a mentett városokhoz
 
+### Celsius és Fahrenheit átváltása
+Felhasználói preferencia szerint állítható, hogy C° vagy F° legyen az adott hőmérséklet mértékegysége.
+
 ### Napi időjárás
 Adott nap részletesebb, órákra lebontott időjárási adatai biztosítása.
 
