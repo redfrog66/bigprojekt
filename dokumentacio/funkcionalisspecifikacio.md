@@ -6,6 +6,10 @@ Az alkalmazás célja egy időjárás előrejelző létrehozása, ami széleskö
 
 ## A rendszer céljai és nem céljai
 
+Az előrejelzést Prediction útján szeretnénk létrehozni, ehhez pedig TensowFlow-ot fogunk használni a tanításhoz. Projektünk egyik célja, hogy gépi tanulást segítségül hívva pontosabb előrejelzést tudjunk adni a felhasználóknak, miközben a felhasználói élményt is szem előtt tartjuk, illetve a csapatmunka során a csapat tagjai is fejlődjenek mind fejlesztés, mind kommunikáció és kivitelezés terén.
+
+A projektünknek aktuálisan nem célja tűpontos információkat szolgálni, erőforrásunkhoz és csapatunk méretéhez mérten vagyunk képesek felelősséget vállalni a publikált információkért. A projektünk célja, hogy egy olyan alapot adjon, amelyet később bővíteni lehet, és így egyre pontosabb információkat tudunk szolgáltatni a felhasználóknak.
+
 ## Jelenlegi helyzet
 
 Mindennapjaink meghatározó részét képezi az adott napi időjárás. Befolyásoló tényező öltözködésünkben, programjainkban, terveinkben. Nincs is rosszabb érzés, mint amikor egy sokáig tervezett esemény meghiúsul egy eső vagy egy vihar miatt. Emiatt nagyon fontos egy megbízható időjárás előrejelző alkalmazás, ami segít tájékozódni abban, hogy mi vár ránk. Létezik már több ilyen is, azonban egyik sem olyan személyre szabott, mint amit mi szeretnénk. 
@@ -24,25 +28,113 @@ Néhány általános jogi követelmény a programmal szemben:
 
 ## Jelenlegi üzleti folyamatok modellje
 
+A projekt célja egy kibővített időjárásjelentő asztali alkalmazás, amely bizonyos szintig személyreszabható, és képes a felhasználók igényeinek megfelelően működni. Erősen dependens a Python programozási nyelven, illetve a TensorFlow adatbázisain, amelyeket a projekt során használni fogunk. A projekt során a csapat tagjai a következő főfeladatokat látják el:
+
+* TensorFlow adatbázisok tanulmányozása, adatok feldolgozása
+* Python programozási nyelv tanulmányozása, a projekt során használt modulok megismerése
+* Django keretrendszer tanulmányozása, a projekt során használt modulok megismerése
+* Predikció megvalósítása
+* Webes felület megvalósítása
+* Webes felület összekötése a predikció során létrehozott adatbázissal
+* Regisztrációs felület megvalósítása
+* Regisztráció lehetőségének megvalósítása
+* Bejelentkezés lehetőségének megvalósítása
+* Személyreszabhatóság lehetőségének megvalósítása
+
+A projekt egyéb feladatokat is tartalmazhat, amelyek a fentiekhez hasonlóak, és a projekt során merülnek fel. Bizonyos tervezett feladatok során ütközhetünk olyan problémákba, melyek befolyásolják a többi feladatot, így nem kizárt, hogy egyes felsorolt feladatok nem kerülnek megvalósításra, vagy a projekt során új feladatok merülnek fel.
+
+Az alkalmazás 1.0 verzió tervei a következők:
+
+| Verzió | Leírás                                  |
+|-------|----------------------------------------|
+| 1.0   | Alapvető funkcionalitások megvalósítása   |
+| 1.0   | Alapvető webes felület megvalósítása     |
+| 1.0   | Alapvető predikció megvalósítása         |
+| 1.0   | Alapvető regisztrációs felület megvalósítása |
+| 1.0   | Alapvető bejelentkezés lehetőségének megvalósítása |
+| 1.0   | Alapvető személyreszabhatóság lehetőségének megvalósítása |
+
+
 ## Igényelt üzleti folyamatok modellje
+
+Az alkalmazás munkálatait több verzióra bontjuk, ugyanis egy olyan projektet szeretnénk végigvinni, amely a csapat kapacitásához mérten bővíthető. Ezzel a tervezési folyamat rugalmasságát is biztosítani tudjuk, és szilárd alapot ad a kivitelezéshez. A verziókban történő bontás segít a csapatnak a munka megtervezésében, és a feladatok megvalósításában.
+
+Az 1.0 verzió az, amit mindenképpen szeretnénk megvalósítani, így külön szedjük az egyéb, felhasználói élményt javító fejlesztésektől.
+
+Az alkalmazás 1.0 verzió tervei a következők:
+| Verzió | Leírás                                  |
+|-------|----------------------------------------|
+| 1.0   | Alapvető funkcionalitások megvalósítása   |
+| 1.0   | Alapvető webes felület megvalósítása     |
+| 1.0   | Alapvető predikció megvalósítása         |
+| 1.0   | Alapvető regisztrációs felület megvalósítása |
+| 1.0   | Alapvető bejelentkezés lehetőségének megvalósítása |
+| 1.0   | Alapvető személyreszabhatóság lehetőségének megvalósítása |
+
+A 2.0 verzióban szeretnénk a felhasználói élményt bővíteni, olyan egyéb ötleteinket soroljuk ide, melyek megvalósítása nem befolyásolja a 1.0 verzió megvalósítását, de lehetőség szerint jelentősen bővíthetik a projektünk végeredményét.
+
+Az alkalmazás 2.0 verzió tervei a következők:
+| Verzió | Leírás                                  |
+|-------|----------------------------------------|
+| 2.0   | Személyreszabhatóság bővítése   |
+| 2.0   | Értesítő küldése kiválasztott napokról  |
+| 2.0   | Esetleges új design elemek a felületen  |
+
 
 ## Követelmény lista
 
+### Bejelentkezés
+Lehetőség van bejelentkezésre de nem kötelező, személyre szabási funkciók csak bejelentkezéssel érhetőek el.
+
+### Személyes hőérzet megadása
+Amennyiben a felhasználó úgy dönt a személyes hőérzetét megadhatja így az alapértelmezettől eltérő ruházat ajánlásban részesülhet.
+
+### Város megadása
+Város megadása a helyi időjárás megjelenítése érdekében.
+
+### Új város
+Város hozzáadása a mentett városokhoz
+
+### Mentett városok közötti választás
+Több várost meg lehet adni hogy egy kattintással lehessen váltani köztük.
+
 ## Fejlesztési Folyamat
 
+A projekt során a csapat tagjai a következő főfeladatokat látják el:
+* TensorFlow adatbázisok tanulmányozása, adatok feldolgozása
+* Python programozási nyelv tanulmányozása, a projekt során használt modulok megismerése
+* Django keretrendszer tanulmányozása, a projekt során használt modulok megismerése
+* Predikció megvalósítása
+* Webes felület megvalósítása
+* Webes felület összekötése a predikció során létrehozott adatbázissal
+* Regisztrációs felület megvalósítása
+* Regisztráció lehetőségének megvalósítása
+* Bejelentkezés lehetőségének megvalósítása
+* Személyreszabhatóság lehetőségének megvalósítása
+
+A projekt egyéb feladatokat is tartalmazhat, amelyek a fentiekhez hasonlóak, és a projekt során merülnek fel. Bizonyos tervezett feladatok során ütközhetünk olyan problémákba, melyek befolyásolják a többi feladatot, így nem kizárt, hogy egyes felsorolt feladatok nem kerülnek megvalósításra, vagy a projekt során új feladatok merülnek fel.
+
 ## Használati esetek
+
+Regisztrált Felhasználó (User): A regisztrált felhasználók olyan személyek, akik létrehoztak egy fiókot az alkalmazásban, és hozzáférnek a személyre szabott funkcionalitásokhoz.
+
+Vendég Felhasználó (Guest): Vendég felhasználók az alkalmazásban nincsenek regisztrálva és csak az alapvető funkcionalitásokhoz férnek hozzá.
 
 ## Megfeleltetés, hogyan fedik le a használati esetek a követelményeket 
 
 ## Képernyő tervek
 
-![basic_figma](basic_figma.png)
+![basic_figma](assets/basic_figma.png)
 
 ## Forgatókönyv
+A felhasználó megadja a várost amiben tartózkodik, ezután a program kiírja az arra a városra vonatkozó időjárást és ajánl egy öltözetet.
 
 ## Funkció - követelmény megfeleltetés 
 
 ## Teszttervek
+A teszttervek részleteit a rendszerterv fogja tartalmazni. Megfelelő teszttervek írása előtt még az aktuálisnál is pontosabb információkra van szükségünk a fejlesztéssel kapcsolatban.
+
+A tesztfolyamatnak arra alkalmas tag, idő és erőforrások hiányában nem lesz része a penetrációs teszt. Jelenlegi elgondolás szerint egységtesztek a python nyelven írt funkciókra fognak készülni. A tesztjegyzőkönyvben főleg felhasználás során előforduló hibákat szeretnénk kiszűrni.
 
 ## Fogalomszótár
 
