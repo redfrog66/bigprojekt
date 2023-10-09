@@ -101,6 +101,10 @@ A projekt egyéb feladatokat is tartalmazhat, amelyek a fentiekhez hasonlóak, �
 
 ## Használati esetek
 
+Regisztrált Felhasználó (User): A regisztrált felhasználók olyan személyek, akik létrehoztak egy fiókot az alkalmazásban, és hozzáférnek a személyre szabott funkcionalitásokhoz.
+
+Vendég Felhasználó (Guest): Vendég felhasználók az alkalmazásban nincsenek regisztrálva és csak az alapvető funkcionalitásokhoz férnek hozzá.
+
 ## Megfeleltetés, hogyan fedik le a használati esetek a követelményeket 
 
 ## Képernyő tervek
