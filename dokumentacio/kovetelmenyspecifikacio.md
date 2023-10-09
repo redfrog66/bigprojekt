@@ -86,9 +86,14 @@ Python - A Python egy általános célú, nagyon magas szintű programozási nye
 
 Django - A Django egy ingyenes és nyílt forráskódú, Python-alapú webes keretrendszer, amely a modell–sablon–nézet építészeti mintát követi.
 
+TensorFlow - TensorFlow egy nyílt forráskódú gépi tanulás keretrendszer, amelyet a Google fejlesztett ki. Ez egy rendkívül rugalmas platform, amely lehetővé teszi gépi tanulási modellek készítését, kiképzését és értékelését adatainkon. TensorFlow támogatja a neurális hálózatok, mély tanulás és egyéb gépi tanulási módszerek használatát széles körben.
+
+Predikció - A predikció mesterséges intelligencia területen azt a folyamatot jelenti, amikor egy gépi tanulási vagy mesterséges intelligencia modell előrejelzi vagy becsli egy adott esemény vagy érték valószínűségét vagy értékét a rendelkezésre álló adatok alapján. Ezek a modellek az előző adatok elemzésével és mintázatok azonosításával próbálják megjósolni jövőbeli eseményeket vagy értékeket. 
+
 ## Pozitív felhasználói élmény biztosítása
 
 - Felhasználóbarát GUI:
     * A grafika felhasználói felületnek könnyen használhatónak kell lennie
     * Egyértelműség: a GUI-nak egyértelműnek kell lennie a félreértés elkerülése érdekében
     * Ergonómikus kialakítás: a felhasználói felületnek olvashatónak, könnyen átláthatónak kell lennie felhasználói eszköztől függetlenül
+  
