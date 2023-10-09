@@ -1,0 +1,52 @@
+<mxfile host="app.diagrams.net" modified="2023-10-09T12:37:44.012Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="7D60QIziZxnGSbzcFefU" version="22.0.4" type="github">
+  <diagram name="Page-1" id="yo8AOzoBUr_xJ8aW7QCD">
+    <mxGraphModel dx="1372" dy="950" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="bZfSAwMK4_I0s8wjxibU-4" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="238" y="130" width="375" height="375" as="geometry" />
+        </mxCell>
+        <mxCell id="bZfSAwMK4_I0s8wjxibU-2" value="&lt;font style=&quot;font-size: 19px;&quot;&gt;Projekttervezés&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#0050ef;strokeColor=#001DBC;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="355" y="70" width="140" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="bZfSAwMK4_I0s8wjxibU-3" value="&lt;font style=&quot;font-size: 25px;&quot;&gt;Gyakorlati témák&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="390" y="310" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8M1dKELpn2bQ_gQ2JZO7-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="bZfSAwMK4_I0s8wjxibU-5" target="bZfSAwMK4_I0s8wjxibU-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bZfSAwMK4_I0s8wjxibU-5" value="&lt;span style=&quot;font-size: 19px;&quot;&gt;Adatgyűjtés és feldolgozás&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#0050ef;strokeColor=#001DBC;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="530" y="150" width="140" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="8M1dKELpn2bQ_gQ2JZO7-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="bZfSAwMK4_I0s8wjxibU-6" target="bZfSAwMK4_I0s8wjxibU-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bZfSAwMK4_I0s8wjxibU-6" value="&lt;font style=&quot;font-size: 19px;&quot;&gt;Modell kialakítása és kiképzése&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#0050ef;strokeColor=#001DBC;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="520" y="330" width="140" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="8M1dKELpn2bQ_gQ2JZO7-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="bZfSAwMK4_I0s8wjxibU-7" target="bZfSAwMK4_I0s8wjxibU-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bZfSAwMK4_I0s8wjxibU-7" value="&lt;font style=&quot;font-size: 19px;&quot;&gt;Értékelés és finomhangolás&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#0050ef;strokeColor=#001DBC;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="355.5" y="420" width="140" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="8M1dKELpn2bQ_gQ2JZO7-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="bZfSAwMK4_I0s8wjxibU-8" target="8M1dKELpn2bQ_gQ2JZO7-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bZfSAwMK4_I0s8wjxibU-8" value="&lt;span style=&quot;font-size: 19px;&quot;&gt;Webalkalmazás és felhasználói felület&lt;br&gt;&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#0050ef;strokeColor=#001DBC;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="190" y="330" width="140" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="8M1dKELpn2bQ_gQ2JZO7-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="8M1dKELpn2bQ_gQ2JZO7-2" target="bZfSAwMK4_I0s8wjxibU-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8M1dKELpn2bQ_gQ2JZO7-2" value="&lt;span style=&quot;font-size: 19px;&quot;&gt;Deployment&lt;br&gt;&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#0050ef;strokeColor=#001DBC;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="190" y="140" width="140" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="8M1dKELpn2bQ_gQ2JZO7-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0.593;entryY=-0.007;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="bZfSAwMK4_I0s8wjxibU-2" target="bZfSAwMK4_I0s8wjxibU-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
