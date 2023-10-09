@@ -103,7 +103,10 @@ Több évre visszamenően megtekinthető az adott nap hőmérsékleti adatai
 Több várost meg lehet adni, hogy egy kattintással lehessen váltani köztük.
 
 ## Irányított és szabad szöveges riportok szövege
-
+- A megrendelőnek van-e igénye sötét/világos téma közötti váltásra?   -   Nincs, viszont az akadálymentesítés okán nem vesszük ki a tervezett bővítések listájából, de megfontoljuk, hogy melyik verzió részeként valósítsuk meg.
+- A megrendelőnek van-e igénye időjárással kapcsolatos hírekre?    -      Nincs, viszont a felületünk sokszínűségének érdekében megpróbálkozunk a megvalósítással.
+- Van-e olyan egyéb információ, amit a megrendelő szívesen látna egy időjárásjelentő oldalon?    -    Pártalom, szél, hasonlók még hasznosak lehetnek, de a fő szempont maradjon a hőmérséklet.
+  
 ## Fogalomszótár
 
 Python - A Python egy általános célú, nagyon magas szintű programozási nyelv. A nyelv tervezési filozófiája az olvashatóságot és a programozói munka megkönnyítését helyezi előtérbe a futási sebességgel szemben.
