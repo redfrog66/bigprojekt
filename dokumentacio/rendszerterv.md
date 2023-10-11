@@ -41,6 +41,8 @@ Elmenthet városokat is, az alapértelmezetten felül. Ez gyorsítja a felhaszn�
 ### Átváltás Fahrenheitre
 Előreláthatólag egy gomb fogja megvalósítani, hogy a napi hőmérséklet Fahrenheitben is megjelenjen. A gomb megnyomásával a hőmérséklet átváltódik Fahrenheitre, a gomb újra megnyomásával pedig vissza Celsiusra.
 
+<img src = "assets/homerseklet_atvaltas.png">
+
 ### Egy életbeli példa, mely szemlélteti a felhasználást
 
 
