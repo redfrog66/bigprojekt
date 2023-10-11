@@ -172,8 +172,6 @@ meteorológia előrejelzéseiről gyakrabban, akár napi szinten szeretne tájé
 Egy képlet segítségével biztosítjuk a hőmérsékleti adatok egyszerű és gyors átváltását ami a felhasználói 
 élményt hivatott javítani, egyszerűsíteni.
 
-<img src = "assets/homerseklet_atvaltas.png">
-
 ### Napi időjárás
 A napi időjárás funkció elérhetővé teszi az adott napi időjárási predikció órákra lebontott megtekintését.
 
