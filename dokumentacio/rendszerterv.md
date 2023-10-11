@@ -43,6 +43,9 @@ Előreláthatólag egy gomb fogja megvalósítani, hogy a napi hőmérséklet Fa
 
 <img src = "assets/homerseklet_atvaltas.png">
 
+Az átváltás gombnyomással történő megoldása az adatbázisban tárolt adatok mennyiségének minimalizálása érdekében történt.
+Amennyiben a tesztelési fázis alatt jelentős mértékű lassulást tapasztalunk a futási időben, lehetséges, hogy külön el lesznek tárolva az adatok F°-ban is.
+
 ### Egy életbeli példa, mely szemlélteti a felhasználást
 
 
