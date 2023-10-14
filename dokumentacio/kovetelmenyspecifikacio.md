@@ -76,10 +76,10 @@ Az alkalmazás 2.0 verzió tervei a következők:
 ## Követelmény lista
 
 ### Bejelentkezés
-Lehetőség van bejelentkezésre de nem kötelező, személyre szabási funkciók csak bejelentkezéssel érhetőek el.
+Lehetőség van bejelentkezésre, de nem kötelező, személyre szabási funkciók csak bejelentkezéssel érhetőek el.
 
 ### Személyes hőérzet megadása
-Amennyiben a felhasználó úgy dönt a személyes hőérzetét megadhatja így az alapértelmezettől eltérő ruházat ajánlásban részesülhet.
+Amennyiben a felhasználó úgy dönt a személyes hőérzetét megadhatja, így az alapértelmezettől eltérő ruházat ajánlásban részesülhet.
 
 ### Város megadása
 Város megadása a helyi időjárás megjelenítése érdekében.
@@ -87,11 +87,26 @@ Város megadása a helyi időjárás megjelenítése érdekében.
 ### Új város
 Város hozzáadása a mentett városokhoz
 
+### Celsius és Fahrenheit átváltása
+Felhasználói preferencia szerint állítható, hogy C° vagy F° legyen az adott hőmérséklet mértékegysége.
+
+### Napi időjárás
+Adott nap részletesebb, órákra lebontott időjárási adatai biztosítása.
+
+### Hét napos előrejelzés
+Az elkövetkező hét nap időjárási predikciójának biztosítása.
+
+### Korábbi adatok
+Több évre visszamenően megtekinthető az adott nap hőmérsékleti adatai
+
 ### Mentett városok közötti választás
-Több várost meg lehet adni hogy egy kattintással lehessen váltani köztük.
+Több várost meg lehet adni, hogy egy kattintással lehessen váltani köztük.
 
 ## Irányított és szabad szöveges riportok szövege
-
+- A megrendelőnek van-e igénye sötét/világos téma közötti váltásra?   -   Nincs, viszont az akadálymentesítés okán nem vesszük ki a tervezett bővítések listájából, de megfontoljuk, hogy melyik verzió részeként valósítsuk meg.
+- A megrendelőnek van-e igénye időjárással kapcsolatos hírekre?    -      Nincs, viszont a felületünk sokszínűségének érdekében megpróbálkozunk a megvalósítással.
+- Van-e olyan egyéb információ, amit a megrendelő szívesen látna egy időjárásjelentő oldalon?    -    Pártalom, szél, hasonlók még hasznosak lehetnek, de a fő szempont maradjon a hőmérséklet.
+  
 ## Fogalomszótár
 
 Python - A Python egy általános célú, nagyon magas szintű programozási nyelv. A nyelv tervezési filozófiája az olvashatóságot és a programozói munka megkönnyítését helyezi előtérbe a futási sebességgel szemben.

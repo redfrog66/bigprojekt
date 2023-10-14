@@ -2,7 +2,7 @@
 
 ## Projekt leírás
 
-Egy időjárás jelentésre alkalmas webapplikáció, melyhez Pythont, Django-t és TensowFlow-ot fogunk használni alapul. A Projekt beadandó a Szoftverfejlesztési Módszertanok tárgyunkra.
+Egy időjárás jelentésre alkalmas webapplikáció, melyhez Pythont, Django-t és TensorFlow-ot fogunk használni alapul. A Projekt beadandó a Szoftverfejlesztési Módszertanok tárgyunkra.
 
 ## Csapattagok
 
@@ -21,4 +21,4 @@ Egy időjárás jelentésre alkalmas webapplikáció, melyhez Pythont, Django-t 
 
 ## Oktató anyagai
 
-- [Oktató weboldala](https://aries.ektf.hu/~tajti/szfm.html)
+- [Anyagok](https://aries.ektf.hu/~tajti/szfm.html)

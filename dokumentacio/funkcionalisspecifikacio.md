@@ -95,6 +95,18 @@ Város megadása a helyi időjárás megjelenítése érdekében.
 ### Új város
 Város hozzáadása a mentett városokhoz
 
+### Celsius és Fahrenheit átváltása
+Felhasználói preferencia szerint állítható, hogy C° vagy F° legyen az adott hőmérséklet mértékegysége.
+
+### Napi időjárás
+Adott nap részletesebb, órákra lebontott időjárási adatai biztosítása.
+
+### Hét napos előrejelzés
+Az elkövetkező hét nap időjárási predikciójának biztosítása.
+
+### Korábbi adatok
+Több évre visszamenően megtekinthető az adott nap hőmérsékleti adatai
+
 ### Mentett városok közötti választás
 Több várost meg lehet adni hogy egy kattintással lehessen váltani köztük.
 
@@ -129,7 +141,50 @@ Vendég Felhasználó (Guest): Vendég felhasználók az alkalmazásban nincsene
 ## Forgatókönyv
 A felhasználó megadja a várost amiben tartózkodik, ezután a program kiírja az arra a városra vonatkozó időjárást és ajánl egy öltözetet.
 
-## Funkció - követelmény megfeleltetés 
+## Megfeleltetés, hogyan fedik le a használati esetek a követelményeket
+
+Mind a felhasználó, mind az admin képes a követelménylistán szereplő elemekhez hozzáférni, manipulálni azokat.
+Az admin fő célja ezeket tesztelés során kezelni, és a projektünk esetében fontos, hogy ugyanolyan képet kapjon
+a szoftverről, mint amilyen a felhasználó elé kerül. Ennek indoka, hogy a tesztelés során kiszűrjük a lehetséges 
+fejlesztői hibákat, és megbizonyosodjunk, hogy ezek élettani hatása nem negatív. A funkciók jelentős része a felhasználó 
+élmény javítását és magas szinten tartását szolgálja.
+
+### Bejelentkezés
+A GUI-n lehetősége van a felhasználónak bejelentkezni a saját felhasználói fiókjába, mely adatia 
+a billentyűzetről kerülnek beolvasásra. A bejelentkezés lehetővé teszi, hogy a felhasználó be tudjon állítani 
+és el tudjon menteni bizonyos paramétereket amelyeknek köszönhetően személyre szabottan tudja ellátni a feladatát a szoftver.
+
+### Személyes hőérzet megadása
+Lehetőséget ad a bejelentkezett felhasználóknak arra, hogy saját igényeik alapján megadják a hőérzetüket
+melyet alapul vesz a ruházat ajánlásáért felelős algoritmus, ezáltal pontosabb, bizonyos esetekben 
+az alapértelmezettől független öltözködési tippekkel látja el őt.
+
+### Város megadása
+Lehetőséget ad arra, hogy adott városok időjárási adai lekérdezhetőek legyenek, ezáltal még 
+pontosabb lokális szűrés hajtható végre.
+
+### Új város
+Az új város funkció lényege, hogy a felhasználó el tudja menteni azokat a városokat, amelyek 
+meteorológia előrejelzéseiről gyakrabban, akár napi szinten szeretne tájékozódni, ezáltal gyorsabb 
+és könnyebben hozzáférhetőek lesznek a számára szükséges adatok.
+
+### Celsius és Fahrenheit átváltása
+Egy képlet segítségével biztosítjuk a hőmérsékleti adatok egyszerű és gyors átváltását ami a felhasználói 
+élményt hivatott javítani, egyszerűsíteni.
+
+### Napi időjárás
+A napi időjárás funkció elérhetővé teszi az adott napi időjárási predikció órákra lebontott megtekintését.
+
+### Hét napos előrejelzés
+A hét napos előrejelzés az elkövetkezendő hét napról kínál információt a felhasználónka, ezáltal hivatott 
+megkönnyíteni az el előtervezést, programok szervezését.
+
+### Korábbi adatok
+A korábbi adatok a pontos, megtörtént időjárási előzmény elérését biztosítja a felhasználónak, 
+ezáltal pontosabb képet kaphat az elkövetkezendő napokról is.
+
+### Mentett városok közötti választás
+Az "új város" funkcióval elmentett települések közötti gyors és kényelmes váltást hivatott biztosítani.
 
 ## Teszttervek
 A teszttervek részleteit a rendszerterv fogja tartalmazni. Megfelelő teszttervek írása előtt még az aktuálisnál is pontosabb információkra van szükségünk a fejlesztéssel kapcsolatban.
@@ -141,6 +196,8 @@ A tesztfolyamatnak arra alkalmas tag, idő és erőforrások hiányában nem les
 Python - A Python egy általános célú, nagyon magas szintű programozási nyelv. A nyelv tervezési filozófiája az olvashatóságot és a programozói munka megkönnyítését helyezi előtérbe a futási sebességgel szemben.
 
 Django - A Django egy ingyenes és nyílt forráskódú, Python-alapú webes keretrendszer, amely a modell–sablon–nézet építészeti mintát követi.
+
+TensorFlow - A TensorFlow egy ingyenes és nyílt forráskódú szoftverkönyvtár gépi tanuláshoz és mesterséges intelligenciához.
 
 ## Pozitív felhasználói élmény biztosítása
 
