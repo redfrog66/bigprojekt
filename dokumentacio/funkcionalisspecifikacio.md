@@ -136,7 +136,9 @@ Vendég Felhasználó (Guest): Vendég felhasználók az alkalmazásban nincsene
 
 ## Képernyő tervek
 
-![basic_figma](assets/basic_figma.png)
+![kezdo_kepernyo](assets/kezdo_kepernyo_terv.png)
+![bejelentkezes](assets/bejelentkezes_terv.png)
+![regisztracio](assets/regisztracio_terv.png)
 
 ## Forgatókönyv
 A felhasználó megadja a várost amiben tartózkodik, ezután a program kiírja az arra a városra vonatkozó időjárást és ajánl egy öltözetet.
