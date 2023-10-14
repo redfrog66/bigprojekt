@@ -21,4 +21,4 @@ Egy időjárás jelentésre alkalmas webapplikáció, melyhez Pythont, Django-t 
 
 ## Oktató anyagai
 
-- [Anyagok](https://aries.ektf.hu/~tajti/szfm.html)
+- [Oktató weboldala](https://aries.ektf.hu/~tajti/szfm.html)
