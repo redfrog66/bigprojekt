@@ -1,9 +1,10 @@
 # Rendszerterv
 ## Rendszer:
-Asztali felületű időjárásjelentő applikáció. Megad hőmérsékletet, szélsebességet, páratartalmat, és ezek alapján megmondja, hogy milyen ruhát érdemes felvenni. A felhasználók regisztrálhatnak, bejelentkezhetnek, és személyre szabhatnak bizonyos dolgokat. A felületen lehetőség van átváltani Fahrenheitre is.
+Az alkalmazásunk egy Web felülettel rendelkező, Python nyelven íródó időjárásjelentő és időjárás előrejelző applikáció. Széleskörben rendelkezik különböző időjárási adatokkal, például hőmérsékletet, szélsebesség, páratartalom. Ezen információk alapján pedig képes megmondani, hogy milyen ruházat lenne a legideálisabb az adott nap időjárása alapján. A felhasználóknak lehetőségük van regisztráni az oldalra, aminek köszönhetően bejelentkezhetnek, és személyre szabhatnak bizonyos dolgokat. A felületen lehetőség van átváltani Fahrenheitre is.
 
 ## Rendszer célja:
-Célunk egy egyszerű időjárásjelentős applikációt készíteni, pár egyedi csavarral. A projekt fő része a fejlesztők számára a tanulási folyamat, a felhasználók számára pedig a könnyű használat és az információszerzés.
+A csapat célja egy egyszerű időjárásjelentő és időjárás előrejelző applikációt készíteni, pár egyedi csavarral.
+Projektünk másik célja pedig, hogy gépi tanulást segítségül hívva pontosabb előrejelzést tudjunk adni a felhasználóknak, miközben a felhasználói élményt is szem előtt tartjuk, illetve a csapatmunka során a csapat tagjai is fejlődjenek mind fejlesztés, mind kommunikáció és kivitelezés terén. Így tehát a projekt fő része a fejlesztők számára a tanulási folyamat, a felhasználók számára pedig a könnyű használat és az információszerzés.
 
 ## Terv:
 ### Kiindulás
