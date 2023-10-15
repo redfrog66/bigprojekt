@@ -110,6 +110,19 @@ Több évre visszamenően megtekinthető az adott nap hőmérsékleti adatai
 ### Mentett városok közötti választás
 Több várost meg lehet adni hogy egy kattintással lehessen váltani köztük.
 
+
+| Modul       | ID  | Név               | V   | Kifejtés                                       |
+|-------------|-----|-------------------|-----|------------------------------------------------|
+| Jogosultság | L1  | Bejelentkezés     | 1.0 | A felhasználó bejelentkeztetáse                |
+| Modifikáció | M1  | Személyes hőérzet megadása   | 1.0 | A felhasználó hőérzetének megadása  |
+| Modifikáció | M2  | Város megadása    | 1.0 | A legkérdezni kívánt város megadása            |
+| Modifikáció | M3  | Új város megadása | 1.0 | Egy új legkérdezni kívánt város megadása       |
+| Modifikáció | M4  | Celsius/Farenthait váltás| 1.0 | Celsius vagy Farenheit preferncia megadása|
+| Statisztika | S1  | Napi időjárás     | 1.0 | Napi időjárás kimutatása |
+| Statisztika | S2  | Hét napos időjárás| 1.0 | Hét nap időjárásának kimutatása              |
+| Statisztika | S3  | Korábbi adatok | 1.0 | Az elmúlt évek adatai az adott napra vonatkozóan kimutatva              |
+| Jogosultság | L2  | Mentett városok közötti váltás|1.0 | Mentett városok listájából kiválasztani a kívántat|
+
 ## Fejlesztési Folyamat
 
 A projekt során a csapat tagjai a következő főfeladatokat látják el:
