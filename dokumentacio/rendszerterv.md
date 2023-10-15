@@ -49,6 +49,28 @@ Amennyiben a tesztelési fázis alatt jelentős mértékű lassulást tapasztalu
 
 ### Egy életbeli példa, mely szemlélteti a felhasználást
 
+Felhasználó: Anna
+
+Szituáció: Anna egy hétvégi kirándulást tervez családjával egy tóhoz. Az időjárástől függően szeretné eldönteni, hogy érdemes-e elindulni, vagy érdemes inkább egy másik hétvégére áttenni a tervezett kirándulást.
+
+Felhasználási eset: Időjárás előrejelzés lekérdezése
+
+1. Anna először megnyitja az időjárás előrejelző alkalmazást a telefonján.
+
+2. Bejelentkezik a fiókjába, mivel korábban regisztrált.
+
+3. A "Keresés" funkciót használja, és begépeli a tervezett kirándulás helyszínét, amely egy tó mellett van.
+
+4. Az alkalmazás megjeleníti az aktuális időjárási adatokat a tervezett helyszínen. Anna láthatja, hogy az aktuális napon várhatóan esni fog az eső.
+
+5. Anna továbblép, és megtekinti a heti előrejelzést is. Látja, hogy holnapra és a következő napokra is esős időjárást jeleznek előre.
+
+6. Az időjárás előrejelzés alapján Anna úgy dönt, hogy jobb lenne elhalasztani a kirándulást egy másik hétvégére, amikor napsütéses időt jósolnak.
+
+7. Anna elhalasztja a tervezett kirándulást, és értesíti a családját az időjárás előrejelzés alapján hozott döntéséről.
+
+Ez a példa jól szemlélteti, hogyan használható az időjárás előrejelző alkalmazás a mindennapi életben a döntések támogatására. Anna az alkalmazás segítségével könnyen megtudhatta az aktuális és a jövőbeli időjárási feltételeket, és ennek alapján a legjobb döntést hozta a hétvégi kirándulás időzítésével kapcsolatban.
+
 
 ### Felhasználói hozzáférhetőség
 
