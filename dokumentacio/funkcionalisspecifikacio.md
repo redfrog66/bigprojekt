@@ -154,7 +154,7 @@ Vendég Felhasználó (Guest): Vendég felhasználók az alkalmazásban nincsene
 ![regisztracio](assets/regisztracio_terv.png)
 
 ## Forgatókönyv
-A felhasználó megadja a várost amiben tartózkodik, ezután a program kiírja az arra a városra vonatkozó időjárást és ajánl egy öltözetet.
+A felhasználó megadja a várost amiben tartózkodik, ezután a program kiírja az arra a városra vonatkozó időjárást és ajánl egy öltözetet. Estelegesen megnézi hogy egy másik városban milyen idő van amennyiben érintett.
 
 ## Megfeleltetés, hogyan fedik le a használati esetek a követelményeket
 
