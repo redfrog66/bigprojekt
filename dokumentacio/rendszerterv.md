@@ -142,6 +142,8 @@ Külön felület kinézeti tesztet kap a sötét és a világos téma, így igé
 Gyorsan működő program az elvárásunk, ezért fontos, hogy ellenőrizzük a sebességet. A tesztelés során A működőképesség tesztelésénél sorolt eszközökön megmérjük, mennyi időt vesz igénybe az első futás.
 
 ## 5. Biztonsági teszt
+Bejelentkezés lehetséges így prioritás hogy a felhasználói adatai(mint például a városa, neve, preferenciái, jelszava) ne kerülhessen illetéktelen felek kezébe.
+Futás során figyelmet fektetünk arra hogy az elárolt adatokat megfelelő módon tároljuk, szükség szerint titkosítást és/vagy egyébb eszközöket alkalmazzunk az adatok védelme érdekében.
 
 
 ## 6. Kompatibilitási teszt
