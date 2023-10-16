@@ -85,6 +85,17 @@ Maga a program, hozzáféréstől függően bármilyen időpontban futtatható.
 
 ## Erőforrások:
 
+## Implementációs terv:
+
+### Python 
+A Python egy általános célú, nagyon magas szintű programozási nyelv. A nyelv tervezési filozófiája az olvashatóságot és a programozói munka megkönnyítését helyezi előtérbe a futási sebességgel szemben. Emelett mesterséges intelligencia alapú gépi tanulásra való felhasználáshoz ajánlott mivel terjedelmes oktatóanyagok állnak rendelkezésre amelyek nagyban megkönnyítik a munkafolyamatot.
+
+### Django
+A Django egy ingyenes és nyílt forráskódú, Python-alapú webes keretrendszer, amely a modell–sablon–nézet építészeti mintát követi. A DJango keretrendszer ehetővé teszi számunkra hogy a Python kódunk webes alapon fusson ami a felhasználói élményt növeli így a programot nem kell letölteni és telepíteni. Továbbá így bármilyen módú extra fejlesztéstől is megkíméljük a fejlesztőket hiszen a a cross platform funkcionalitás szükségét teljes mértékben kikerüljük
+
+### TensorFlow
+A TensorFlow egy ingyenes és nyílt forráskódú szoftverkönyvtár gépi tanuláshoz és mesterséges intelligenciához. Használata viszonylag kézenfekvő, elsajátításhoz szükséges idő viszonylag alacsony, így egy project szempontjából előnyös.
+
 # Tesztterv
 ## 1. Működőképesség tesztelése
 Elsősorban a megírt funkciók helyes működéséről győződünk meg. Ehhez a fejlesztők különböző erőforrású számítógépeken futtatják a programot, és jegyzetet készítenek az esetleges előforduló hibákról. Ha minden számítógépen gond nélkül fut, továbbhaladhatunk a fejlesztéssel. Amennyiben egy is hibát dob, a helyzetet kielemezzük, megkeressük a befolyásoló tényezőt és kijavítjuk azt, majd csak ezután haladunk tovább.
