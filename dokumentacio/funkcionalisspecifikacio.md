@@ -149,23 +149,23 @@ Vendég Felhasználó (Guest): Vendég felhasználók az alkalmazásban nincsene
 
 ### Regiszrált felhasználó:
 Regisztrált felhasználóként a következtő követelmények felelnek meg a használati esetnek:
-*Bejelentkezés
-*Személyes hőérzet megadása
-*Város megadása
-*Új város
-*Celsius és Fahrenheit átváltása
-*Napi időjárás
-*Hét napos előrejelzés
-*Korábbi adatok
-*Mentett városok közötti választás
+* Bejelentkezés
+* Személyes hőérzet megadása
+* Város megadása
+* Új város
+* Celsius és Fahrenheit átváltása
+* Napi időjárás
+* Hét napos előrejelzés
+* Korábbi adatok
+* Mentett városok közötti választás
 
 ### Nem regisztrált felhasználó
 
-*Bejelentkezés-Személyes hőérzet megadása
-*Város megadása
-*Celsius és Fahrenheit átváltása
-*Napi időjárás
-*Hét napos előrejelzés
+* Bejelentkezés-Személyes hőérzet megadása
+* Város megadása
+* Celsius és Fahrenheit átváltása
+* Napi időjárás
+* Hét napos előrejelzés
 
 
 ## Képernyő tervek
