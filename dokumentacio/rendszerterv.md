@@ -107,6 +107,7 @@ Ennek érdekében több féle eszközön fogjuk a tesztelést futtatni. Az első
 |------------|------|---------|----------|
 | AMD Ryzen 7   | 16GB | 2 év    | Kiváló    |
 | AMD Ryzen 5  | 8GB  | 3 év    | Elégséges  |
+| Intel Core i5 | 16GB | 4 év     | Kielégítő |
 
 Egyéb tesztelésre használt eszközök:
 | Processzor | RAM  | Életkor | Állapot  |
@@ -114,7 +115,7 @@ Egyéb tesztelésre használt eszközök:
 | AMD Ryzen 5   | 8GB | 1 év    | Kiváló    |
 |  Intel Core i5  | 8GB  | 6 év    | Kielégítő  |
 |  AMD Ryzen 5  | 31GB  | <1 év    | Kiváló  |
-
+| Intel Core i7 | 32GB | 1 év     | Kiváló |
 
 ## 2. Felület tesztelése
 Itt a fő szempont, hogy a felületen minden szükséges elem megtalálható, mindhez hozzá van kötve a megfelelő funkció. A kód tisztítása is itt történik, a funkcióval nem rendelkező elemek eltávolításra kerülnek.
@@ -122,11 +123,28 @@ A követelménylistánk a következő:
 
 | Modul       | ID  | Név               | V   | Kifejtés                                       |
 |-------------|-----|-------------------|-----|------------------------------------------------|
+| Jogosultság | L1  | Bejelentkezés     | 1.0 | A felhasználó bejelentkeztetése                |
+| Modifikáció | M1  | Személyes hőérzet megadása   | 1.0 | A felhasználó hőérzetének megadása  |
+| Modifikáció | M2  | Város megadása    | 1.0 | A lekérdezni kívánt város megadása            |
+| Modifikáció | M3  | Új város megadása | 1.0 | Egy új lekérdezni kívánt város megadása       |
+| Modifikáció | M4  | Celsius/Farenthait váltás| 1.0 | Celsius vagy Farenheit preferncia megadása|
+| Statisztika | S1  | Napi időjárás     | 1.0 | Napi időjárás kimutatása |
+| Statisztika | S2  | Hét napos időjárás| 1.0 | Hét nap időjárásának kimutatása              |
+| Statisztika | S3  | Korábbi adatok | 1.0 | Az elmúlt évek adatai az adott napra vonatkozóan kimutatva              |
+| Jogosultság | L2  | Mentett városok közötti váltás|1.0 | Mentett városok listájából kiválasztani a kívántat|
 
 Az ehhez szükséges elemek:
 | Név               | V   | Szükséges elem                                       |
 |-------------------|-----|------------------------------------------------|
-
+| Bejelentkezés     | 1.0 | 2 db mező, amelyek billentyűzetről várnak tartalmat és gomb |
+| Személyes hőérzet megadása  | 1.0 | Mező, amely billentyűzetről vár tartalmat |
+| Város megadása    | 1.0 | Mező, amely billentyűzetről vár tartalmat |
+| Új város megadása | 1.0 | Mező, amely billentyűzetről vár tartalmat |
+| Celsius/Farenthait váltás| 1.0 | Gomb |
+| Napi időjárás     | 1.0 | Kijelző és ehhez tartozó adatbázis |
+| Hét napos időjárás| 1.0 | Kijelző és ehhez tartozó adatbázis |
+| Korábbi adatok | 1.0 | Kijelző és ehhez tartozó adatbázis |
+| Mentett városok közötti váltás|1.0 | Lista és gomb |
 
 Egyéb elemek:
 | Név               | V   | Szükséges elem                                       |
@@ -166,6 +184,8 @@ A programot több böngészőben is tesztelni fogjuk, mindegyik eszközön.
 |  AMD Ryzen 5  | 31GB  | <1 év    | Kiváló  | x  |    |    |
 | AMD Ryzen 7   | 16GB | 2 év    | Kiváló    |   |  x  |  x  |
 | AMD Ryzen 5  | 8GB  | 3 év    | Elégséges  | x  |    |  x  |
+| Intel Core i5 | 16GB | 4 év     | Kielégítő | x | x |  |
+| Intel Core i7 | 32GB | 1 év     | Kiváló | x |  | x |
 
 ## 7. Dokumentáció ellenőrzés
 A fejlesztés és tesztelés végén újból végigolvassuk a dokumentációt. Szükség esetén frissítjük és/vagy kiegészítjük. Meggyőződünk a dokumentációk naprakészségéről, jólformázottságáról és könnyű értelmezhetőségéről.
