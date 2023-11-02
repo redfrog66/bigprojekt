@@ -81,10 +81,17 @@ print(f"Model accuracy: {a_score}")
 # 5. Adat vizualizáció
 import matplotlib.pyplot as plt
 
-dates = [day['datetime'] for day in data['days']]
-temperatures = [day['temp'] for day in data['days']]
-humidities = [day['humidity'] for day in data['days']]
-pressures = [day['pressure'] for day in data['days']]
+
+try:
+    dates = [day['datetime'] for day in data['days']]
+    temperatures = [day['temp'] for day in data['days']]
+    humidities = [day['humidity'] for day in data['days']]
+    pressures = [day['pressure'] for day in data['days']]
+except KeyError:
+   print("Error: Hiányzó adatok.")
+sys.exit()
+
+
 
 plt.figure(figsize=(10, 6))
 
@@ -101,12 +108,14 @@ plt.show()
 
 # 6. Modell mentése
 import pickle
+try:
+    with open('model.pkl', 'wb') as f:
+        pickle.dump(model, f)
 
-with open('model.pkl', 'wb') as f:
-    pickle.dump(model, f)
-
-with open('preprocessor.pkl', 'wb') as f:
-    pickle.dump(preprocessor, f)
+    with open('preprocessor.pkl', 'wb') as f:
+        pickle.dump(preprocessor, f)
+except Exception as e:
+    print(f"Error: A mentés sikertelen{e}")
 
 
 
