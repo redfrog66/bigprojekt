@@ -47,7 +47,6 @@ numeric_transformer = Pipeline(steps=[
 preprocessor = ColumnTransformer(
     transformers=[
         ('num', numeric_transformer, ['temperature', 'humidity', 'pressure']),
-        # Add more transformers for categorical or text features if needed
     ])
 
 # Adatok előfeldolgozása
@@ -61,11 +60,53 @@ df = pd.DataFrame({'temperature': [temperature],
                    'pressure': [pressure],
                    'target': [0]})
 
-X = df.drop('target', axis=1)
+X = preprocessor.fit_transform(df.drop('target', axis=1))
 y = df['target']
 
-scaler = StandardScaler()
-X_scaled = scaler.fit_transform(X) 
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.2, random_state=42)
+# 3. Modell tanítása
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score
+
+model = LogisticRegression()
+model.fit(X_train, y_train)
+
+# 4. Modell kiértékelése
+y_pred = model.predict(X_test)
+a_score = accuracy_score(y_test, y_pred)
+print(f"Model accuracy: {a_score}")
+
+
+# 5. Adat vizualizáció
+import matplotlib.pyplot as plt
+
+dates = [day['datetime'] for day in data['days']]
+temperatures = [day['temp'] for day in data['days']]
+humidities = [day['humidity'] for day in data['days']]
+pressures = [day['pressure'] for day in data['days']]
+
+plt.figure(figsize=(10, 6))
+
+plt.plot(dates, temperatures, label='Temperature')
+plt.plot(dates, humidities, label='Humidity')
+plt.plot(dates, pressures, label='Pressure')
+
+plt.xlabel('Date')
+plt.ylabel('Value')
+plt.title('Weather Forecast')
+
+plt.legend()
+plt.show()
+
+# 6. Modell mentése
+import pickle
+
+with open('model.pkl', 'wb') as f:
+    pickle.dump(model, f)
+
+with open('preprocessor.pkl', 'wb') as f:
+    pickle.dump(preprocessor, f)
+
+
 
