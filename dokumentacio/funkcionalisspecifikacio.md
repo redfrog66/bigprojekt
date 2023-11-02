@@ -235,6 +235,10 @@ Django - A Django egy ingyenes és nyílt forráskódú, Python-alapú webes ker
 
 TensorFlow - A TensorFlow egy ingyenes és nyílt forráskódú szoftverkönyvtár gépi tanuláshoz és mesterséges intelligenciához.
 
+API - Az API egy olyan alkalmazásprogramozási interfész (alkalmazásprogramozási felület), amely hozzáférést biztosít a szoftveres, és a hardveres erőforrások utasításkészletéhez.
+
+API Key - Az Api Key egy egyedi kód vagy több egyedi kódból álló készlet, amellyel egy API a hívó felhasználót vagy alkalmazást hitelesíti és engedélyezi.
+
 ## Pozitív felhasználói élmény biztosítása
 
 - Felhasználóbarát GUI:
