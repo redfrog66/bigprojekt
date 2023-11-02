@@ -1,0 +1,14 @@
+#mainTitle{
+    text-align: center;
+    font-weight: bolder;
+    color: gray;
+}
+#day{
+    color: gray;
+    text-align: center;
+}
+#temp{
+    color: gray;
+    text-align: center;
+}
+.wCards{margin-top: 5%;}
