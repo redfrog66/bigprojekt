@@ -81,7 +81,7 @@ print(f"Model accuracy: {a_score}")
 # 5. Adat vizualizáció
 import matplotlib.pyplot as plt
 
-
+# Próbáljuk meg kinyerni az adatokat
 try:
     dates = [day['datetime'] for day in data['days']]
     temperatures = [day['temp'] for day in data['days']]
@@ -92,22 +92,29 @@ except KeyError:
 sys.exit()
 
 
-
+# Új ábra létrehozása
 plt.figure(figsize=(10, 6))
 
+# Hőmérséklet, páratartalom és nyomás ábrázolása
 plt.plot(dates, temperatures, label='Temperature')
 plt.plot(dates, humidities, label='Humidity')
 plt.plot(dates, pressures, label='Pressure')
 
+# Címkék és cím hozzáadása
 plt.xlabel('Date')
 plt.ylabel('Value')
 plt.title('Weather Forecast')
 
+# Jelmagyarázat hozzáadása
 plt.legend()
+
+# Ábra megjelenítése
 plt.show()
 
 # 6. Modell mentése
 import pickle
+
+# Próbáljuk meg menteni a modellt és az előfeldolgozót
 try:
     with open('model.pkl', 'wb') as f:
         pickle.dump(model, f)
