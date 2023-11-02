@@ -10,3 +10,21 @@ Ez a projekt nagyon jó példa APIs megoldásokhoz. Szembesített, hogy a Tensor
 https://github.com/rezlevi/Weather_Forecast_ML
 
 TODO: Átnézni, felhasználni belőle, ami kapcsolódik  mi projektünkhöz.
+
+#Openweathermap api
+
+Az OpenWeatherMap API-ja naponta 1000 API hívásig ingyenes az ezt meghaladó hívások darabonkénti ára 0.0012 GBP (megközelítőleg 0.5 HUF).
+(forrás: https://openweathermap.org/api)
+
+Az adatok JSON, XML és HTML formátumokban elérhetők.
+(forrás: https://openweathermap.org/current)
+
+Az elérhető adatok a következőek:
+- Több mint 40 évre visszamenően tartalmaz adatokat az időjárásról.
+- 8 napos előrejelzés
+- Óránkénti előrejelzés a következő 48 órában
+- Percenkénti előrejelzés a következő órában
+(forrás: https://openweathermap.org/api/one-call-3)
+
+Az API hívás módja a következő linken elérhető:
+https://openweathermap.org/api/one-call-3
