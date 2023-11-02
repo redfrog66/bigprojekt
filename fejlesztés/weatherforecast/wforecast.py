@@ -69,60 +69,69 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 
+def train_model(X_train, y_train, model):
+    model.fit(X_train, y_train)
+    return model
+
 model = LogisticRegression()
-model.fit(X_train, y_train)
+model = train_model(X_train, y_train, model)
 
 # 4. Modell kiértékelése
-y_pred = model.predict(X_test)
-a_score = accuracy_score(y_test, y_pred)
-print(f"Model accuracy: {a_score}")
+def evaluate_model(model, X_test, y_test):
+    y_pred = model.predict(X_test)
+    a_score = accuracy_score(y_test, y_pred)
+    print(f"Model accuracy: {a_score}")
+
+evaluate_model(model, X_test, y_test)   
 
 
 # 5. Adat vizualizáció
 import matplotlib.pyplot as plt
 
 # Próbáljuk meg kinyerni az adatokat
-try:
-    dates = [day['datetime'] for day in data['days']]
-    temperatures = [day['temp'] for day in data['days']]
-    humidities = [day['humidity'] for day in data['days']]
-    pressures = [day['pressure'] for day in data['days']]
-except KeyError:
-   print("Error: Hiányzó adatok.")
-sys.exit()
+def extract_weather_data(data):
+    try:
+        dates = [day['datetime'] for day in data['days']]
+        temperatures = [day['temp'] for day in data['days']]
+        humidities = [day['humidity'] for day in data['days']]
+        pressures = [day['pressure'] for day in data['days']]
+        return dates, temperatures, humidities, pressures
+    except KeyError:
+        print("Error: Hiányzó adatok.")
+        sys.exit()
 
+dates, temperatures, humidities, pressures = extract_weather_data(data)
 
 # Új ábra létrehozása
-plt.figure(figsize=(10, 6))
+def plot_weather_data(dates, temperatures, humidities, pressures):
+    plt.figure(figsize=(10, 6))
+    # Hőmérséklet, páratartalom és nyomás ábrázolása
+    plt.plot(dates, temperatures, label='Temperature')
+    plt.plot(dates, humidities, label='Humidity')
+    plt.plot(dates, pressures, label='Pressure')
+    # Címkék és cím hozzáadása
+    plt.xlabel('Date')
+    plt.ylabel('Value')
+    plt.title('Weather Forecast')
+    plt.legend() # Jelmagyarázat hozzáadása
+    plt.show() # Ábra megjelenítése
 
-# Hőmérséklet, páratartalom és nyomás ábrázolása
-plt.plot(dates, temperatures, label='Temperature')
-plt.plot(dates, humidities, label='Humidity')
-plt.plot(dates, pressures, label='Pressure')
-
-# Címkék és cím hozzáadása
-plt.xlabel('Date')
-plt.ylabel('Value')
-plt.title('Weather Forecast')
-
-# Jelmagyarázat hozzáadása
-plt.legend()
-
-# Ábra megjelenítése
-plt.show()
+plot_weather_data(dates, temperatures, humidities, pressures)
 
 # 6. Modell mentése
 import pickle
 
 # Próbáljuk meg menteni a modellt és az előfeldolgozót
-try:
-    with open('model.pkl', 'wb') as f:
-        pickle.dump(model, f)
+def save_model(model, preprocessor):
+    try:
+        with open('model.pkl', 'wb') as f:
+            pickle.dump(model, f)
 
-    with open('preprocessor.pkl', 'wb') as f:
-        pickle.dump(preprocessor, f)
-except Exception as e:
-    print(f"Error: A mentés sikertelen{e}")
+        with open('preprocessor.pkl', 'wb') as f:
+            pickle.dump(preprocessor, f)
+    except Exception as e:
+        print(f"Error: A mentés sikertelen{e}")
 
+save_model(model, preprocessor)
 
 
