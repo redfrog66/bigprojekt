@@ -103,19 +103,12 @@ Elsősorban a megírt funkciók helyes működéséről győződünk meg. Ehhez 
 A tesztet legalább 2 különböző számítógépen végezzük el, de minél több esetet szeretnénk ellenőrizni. Akkor nevezhető a teszt sikeresnek, ha a tesztelésre használt eszközök legalább fele 2 évnél idősebb. Erre azért van szükség, mert komolyan vesszük a felhasználó-orientáltságot, és nem realisztikus az a feltevés, hogy terhelésnek alig kitett, új gépeken fogják használni a programunkat. Célunk az esélyegyenlőség, azaz, hogy bárki szabadon használni tudja a játékot.
 
 Ennek érdekében több féle eszközön fogjuk a tesztelést futtatni. Az elsődleges eszközök:
-| Processzor | RAM  | Életkor | Állapot  |
-|------------|------|---------|----------|
-| AMD Ryzen 7   | 16GB | 2 év    | Kiváló    |
-| AMD Ryzen 5  | 8GB  | 3 év    | Elégséges  |
-| Intel Core i5 | 16GB | 4 év     | Kielégítő |
-
-Egyéb tesztelésre használt eszközök:
-| Processzor | RAM  | Életkor | Állapot  |
-|------------|------|---------|----------|
-| AMD Ryzen 5   | 8GB | 1 év    | Kiváló    |
-|  Intel Core i5  | 8GB  | 6 év    | Kielégítő  |
-|  AMD Ryzen 5  | 31GB  | <1 év    | Kiváló  |
-| Intel Core i7 | 32GB | 1 év     | Kiváló |
+| Processzor | RAM  | Életkor | Állapot  | Tesztelő |
+|------------|------|---------|----------|-|
+| AMD Ryzen 7   | 16GB | 2 év    | Kiváló    | Kósa Fruzsina |
+| AMD Ryzen 5  | 16GB  |  <1 év    | Kiváló  | Gellén Rebeka |
+| Intel Core i5 | 16GB | 4 év     | Kielégítő | Bukta Ádám |
+| AMD Ryzen 5   | 8GB | 1 év    | Kiváló    | Dinó Ákos  |
 
 ## 2. Felület tesztelése
 Itt a fő szempont, hogy a felületen minden szükséges elem megtalálható, mindhez hozzá van kötve a megfelelő funkció. A kód tisztítása is itt történik, a funkcióval nem rendelkező elemek eltávolításra kerülnek.
@@ -146,9 +139,6 @@ Az ehhez szükséges elemek:
 | Korábbi adatok | 1.0 | Kijelző és ehhez tartozó adatbázis |
 | Mentett városok közötti váltás|1.0 | Lista és gomb |
 
-Egyéb elemek:
-| Név               | V   | Szükséges elem                                       |
-|-------------------|-----|------------------------------------------------|
 
 ## 3. Felület kinézetének tesztelése
 Célunk, hogy fizikai/érzékszervi korlátokkal rendelkező felhasználóink számára is akadálymentesítsük a felületet. Ennek érdekében külön figyelmet fordítunk a felület kinézetének ellenőrzésére. A színek kontrasztossága, a feliratok olvashatósága a szempont, így különböző monitorokon szeretnénk látni a futó kódot. Ezen tesztelési résznél ellenőrizzük, hogy van-e olyan dizájn-elem, amely nem rendelkezik saját funkcióval, de a felhasználó irányítására szolgál, és valamiféle hibát eredményezhet. Például egy felirat helytelen animálása vezethet villódzáshoz.
@@ -177,15 +167,13 @@ Futás során figyelmet fektetünk arra hogy az elárolt adatokat megfelelő mó
 
 ## 6. Kompatibilitási teszt
 A programot több böngészőben is tesztelni fogjuk, mindegyik eszközön.
-| Processzor | RAM  | Életkor | Állapot  | Chrome | Firefox | Edge   |
-|------------|------|---------|----------|--------|---------|--------|
-| AMD Ryzen 5   | 8GB | 1 év    | Kiváló    | x  |  x  |    |
-|  Intel Core i5  | 8GB  | 6 év    | Kielégítő  | x  |    |  x  |
-|  AMD Ryzen 5  | 31GB  | <1 év    | Kiváló  | x  |    |    |
-| AMD Ryzen 7   | 16GB | 2 év    | Kiváló    |   |  x  |  x  |
-| AMD Ryzen 5  | 8GB  | 3 év    | Elégséges  | x  |    |  x  |
-| Intel Core i5 | 16GB | 4 év     | Kielégítő | x | x |  |
-| Intel Core i7 | 32GB | 1 év     | Kiváló | x |  | x |
+| Processzor | RAM  | Életkor | Állapot  | Chrome | Firefox | Edge   | Tesztelő |
+|------------|------|---------|----------|--------|---------|--------|-|
+| AMD Ryzen 5   | 8GB | 1 év    | Kiváló    | x  |  x  |    |  Dinó Ákos |
+| AMD Ryzen 7   | 16GB | 2 év    | Kiváló    |   |  x  |  x  | Kósa Fruzsina |
+| AMD Ryzen 5  | 16GB  | <1 év    | Kiváló  | x  |    |  x  |  Gellén Rebeka |
+| Intel Core i5 | 16GB | 4 év     | Kielégítő | x | x |  | Bukta Ádám  |
+
 
 ## 7. Dokumentáció ellenőrzés
 A fejlesztés és tesztelés végén újból végigolvassuk a dokumentációt. Szükség esetén frissítjük és/vagy kiegészítjük. Meggyőződünk a dokumentációk naprakészségéről, jólformázottságáról és könnyű értelmezhetőségéről.
