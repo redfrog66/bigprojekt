@@ -130,6 +130,10 @@ TensorFlow - TensorFlow egy nyílt forráskódú gépi tanulás keretrendszer, a
 
 Predikció - A predikció mesterséges intelligencia területen azt a folyamatot jelenti, amikor egy gépi tanulási vagy mesterséges intelligencia modell előrejelzi vagy becsli egy adott esemény vagy érték valószínűségét vagy értékét a rendelkezésre álló adatok alapján. Ezek a modellek az előző adatok elemzésével és mintázatok azonosításával próbálják megjósolni jövőbeli eseményeket vagy értékeket. 
 
+API - Az API egy olyan alkalmazásprogramozási interfész (alkalmazásprogramozási felület), amely hozzáférést biztosít a szoftveres, és a hardveres erőforrások utasításkészletéhez.
+
+API Key - Az Api Key egy egyedi kód vagy több egyedi kódból álló készlet, amellyel egy API a hívó felhasználót vagy alkalmazást hitelesíti és engedélyezi.
+
 ## Pozitív felhasználói élmény biztosítása
 
 - Felhasználóbarát GUI:
