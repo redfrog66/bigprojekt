@@ -7,7 +7,7 @@ body{
 }
 
 #mainTitle{
-    margin-top: 40px;
+    margin-top: 30px;
     font-size: 50px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;
@@ -37,13 +37,13 @@ body{
 .sevendays {
     margin: 0;
     position: absolute;
-    top: 70%;
+    top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
 .sevendaystitle {
-    margin-top: 50px;
+    margin-top: 70px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;
     font-weight: bolder;
@@ -79,7 +79,7 @@ body{
     margin-top: 5%;
 }
 
-/* login button */
+/* login button start*/
 
 .btn-custom-login {
     position: absolute;
@@ -87,12 +87,12 @@ body{
     align-items: center;
     justify-content: center;
     color: #e8e8e8;
-    background-color: #212121;
+    background-color: #093641;
     width: 70px;
     height: 70px;
     font-size: 24px;
     text-transform: uppercase;
-    border: 2px solid #212121;
+    border: 2px solid #093641;
     border-radius: 50%;
     transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
     box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.15),
@@ -151,3 +151,5 @@ body{
       transform: translate(-10%, 10%) rotate(45deg);
     }
   }
+
+  /* login button end */
