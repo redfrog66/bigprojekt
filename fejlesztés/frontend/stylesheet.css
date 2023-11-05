@@ -1,23 +1,55 @@
 body{
-    background-image: url(frontend\assets\background.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-image: url(assets/background.svg);
 }
 
 #mainTitle{
+    margin-top: 40px;
+    font-size: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;
     font-weight: bolder;
-    color: gray;
+    color: #093641;
 }
 #day{
-    color: gray;
+    color: #093641;
     text-align: center;
 }
 #temp{
-    color: gray;
+    color: #093641;
     text-align: center;
 }
 .wCards{
     margin-top: 5%;
 }
+
+.today {
+    margin: 0;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+}
+
+.sevendays {
+    margin: 0;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sevendaystitle {
+    margin-top: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    font-weight: bolder;
+    color: #093641;
+}
+
 #middleTile{
     color: gray;
     text-align: center;
