@@ -1,3 +1,7 @@
+body{
+    background-image: url(frontend\assets\background.svg);
+}
+
 #mainTitle{
     text-align: center;
     font-weight: bolder;
@@ -41,4 +45,11 @@
 #submitBtn{
     text-align: center;
     margin-top: 5%;
+}
+#redirectLogin{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3rem;
+    height: 3rem;
 }
