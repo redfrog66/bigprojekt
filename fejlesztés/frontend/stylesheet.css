@@ -1,3 +1,7 @@
+body{
+    background-image: url(frontend\assets\background.svg);
+}
+
 #mainTitle{
     text-align: center;
     font-weight: bolder;
