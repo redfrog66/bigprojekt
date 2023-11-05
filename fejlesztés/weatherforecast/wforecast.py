@@ -55,7 +55,7 @@ numeric_transformer = Pipeline(steps=[
 # Lépések összefésülése
 preprocessor = ColumnTransformer(
     transformers=[
-        ('num', numeric_transformer, ['temperature', 'humidity', 'pressure']),
+        ('num', numeric_transformer, ['data','temperature', 'humidity', 'pressure']),
     ])
 
 # Adatok előfeldolgozása
