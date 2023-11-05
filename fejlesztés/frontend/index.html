@@ -9,97 +9,105 @@
 </head>
 <body>
     <a href="login.html">
-      <img src="https://static-00.iconduck.com/assets.00/person-icon-512x512-5lhrcpms.png" id="redirectLogin">
+      <button class="btn btn-custom-login text-center">
+        🔑
+      </button>
     </a>
     <h1 id="mainTitle">Weather forecast</h1>
 
-    <div class="container-fluid">
-        <div class="row gx-1 justify-content-center">
-      
-          <div class="col-4 align-middle  wCards">
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="https://cdn-icons-png.flaticon.com/512/3313/3313888.png" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title" id="day">Mai nap</h5>
-                  <p class="card-text" id="temp">10°C</p>
-                </div>
-              </div>
-          </div>
-
-          <div class="col-md-auto align-middle  wCards">
-            <div class="card" style="width: 8rem;">
-                <img class="card-img-top" src="https://cdn-icons-png.flaticon.com/512/3313/3313888.png" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title" id="day">Mai nap</h5>
-                  <p class="card-text" id="temp">10°C</p>
-                </div>
-              </div>
-          </div>
-
-          <div class="col-md-auto  wCards">
-            <div class="card" style="width: 8rem;">
-                <img class="card-img-top" src="https://cdn-icons-png.flaticon.com/512/3313/3313888.png" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title" id="day">Mai nap</h5>
-                  <p class="card-text" id="temp">10°C</p>
-                </div>
-              </div>
-          </div>
-
-          <div class="col-md-auto wCards">
-            <div class="card" style="width: 8rem;">
-                <img class="card-img-top" src="https://cdn-icons-png.flaticon.com/512/3313/3313888.png" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title" id="day">Mai nap</h5>
-                  <p class="card-text" id="temp">10°C</p>
-                </div>
-              </div>
-          </div>
-
-          <div class="col-md-auto wCards">
-            <div class="card" style="width: 8rem;">
-                <img class="card-img-top" src="https://cdn-icons-png.flaticon.com/512/3313/3313888.png" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title" id="day">Mai nap</h5>
-                  <p class="card-text" id="temp">10°C</p>
-                </div>
-              </div>
-          </div>
-
-          <div class="col-md-auto wCards">
-            <div class="card" style="width: 8rem;">
-                <img class="card-img-top" src="https://cdn-icons-png.flaticon.com/512/3313/3313888.png" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title" id="day">Mai nap</h5>
-                  <p class="card-text" id="temp">10°C</p>
-                </div>
-              </div>
-          </div>
-
-          <div class="col-md-auto wCards">
-            <div class="card" style="width: 8rem;">
-                <img class="card-img-top" src="https://cdn-icons-png.flaticon.com/512/3313/3313888.png" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title" id="day">Mai nap</h5>
-                  <p class="card-text" id="temp">10°C</p>
-                </div>
-              </div>
-          </div>
-
-          <div class="col-md-auto wCards">
-            <div class="card" style="width: 8rem;">
-                <img class="card-img-top" src="https://cdn-icons-png.flaticon.com/512/3313/3313888.png" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title" id="day">Mai nap</h5>
-                  <p class="card-text" id="temp">10°C</p>
-                </div>
-              </div>
-          </div>
-          
-          
+    <div>
+      <div class="wCards today" >
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="assets/cloudy.png">
+            <div class="card-body">
+              <h5 class="card-title" id="day">Mai nap</h5>
+              <p class="card-text" id="temp"><b>Hőmérséklet:</b> 11 °C</p>
+              <p class="card-text" id="temp"><b>Páratartalom:</b> 92%</p>
+              <p class="card-text" id="temp"><b>Nyomás:</b> ↑ 995 mb</p>
+            </div>
         </div>
+      </div>
     </div>
 
+    <div class="sevendays">
+
+      <div class="row gx-1 justify-content-center">
+      
+        <h2 class="sevendaystitle">Mi várható a hét további részén?</h2> 
+        <div class="col-md-auto wCards">
+          <div class="card" style="width: 8rem;">
+              <img class="card-img-top" src="assets/rainy.png">
+              <div class="card-body">
+                <h5 class="card-title" id="day">Mai nap</h5>
+                <p class="card-text" id="temp">10°C</p>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-md-auto  wCards">
+          <div class="card" style="width: 8rem;">
+              <img class="card-img-top" src="assets/sunny.png">
+              <div class="card-body">
+                <h5 class="card-title" id="day">Mai nap</h5>
+                <p class="card-text" id="temp">10°C</p>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-md-auto wCards">
+          <div class="card" style="width: 8rem;">
+              <img class="card-img-top" src="assets/stormy.png">
+              <div class="card-body">
+                <h5 class="card-title" id="day">Mai nap</h5>
+                <p class="card-text" id="temp">10°C</p>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-md-auto wCards">
+          <div class="card" style="width: 8rem;">
+              <img class="card-img-top" src="assets/cloudy.png">
+              <div class="card-body">
+                <h5 class="card-title" id="day">Mai nap</h5>
+                <p class="card-text" id="temp">10°C</p>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-md-auto wCards">
+          <div class="card" style="width: 8rem;">
+              <img class="card-img-top" src="assets/stormy.png">
+              <div class="card-body">
+                <h5 class="card-title" id="day">Mai nap</h5>
+                <p class="card-text" id="temp">10°C</p>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-md-auto wCards">
+          <div class="card" style="width: 8rem;">
+              <img class="card-img-top" src="assets/windy.png" >
+              <div class="card-body">
+                <h5 class="card-title" id="day">Mai nap</h5>
+                <p class="card-text" id="temp">10°C</p>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-md-auto wCards">
+          <div class="card" style="width: 8rem;">
+              <img class="card-img-top" src="assets/snowy.png">
+              <div class="card-body">
+                <h5 class="card-title" id="day">Mai nap</h5>
+                <p class="card-text" id="temp">10°C</p>
+              </div>
+            </div>
+        </div>
+        
+        
+      </div>
+  </div>
+    </div>
 
 
 
