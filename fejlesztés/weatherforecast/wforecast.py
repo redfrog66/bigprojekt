@@ -6,31 +6,40 @@ import urllib.request
 import sys
 import json
 
-api_key = "YOUR_API_KEY" #TODO API KEY
+# api_key = "JG5A6TC3EWVAZC5W6P3JZAUGR" #TODO API KEY
 
-try: 
-  url = f"https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/Hungary/last30days?unitGroup=metric&key={api_key}&contentType=json"
-  ResultBytes = urllib.request.urlopen(url)
-  # TODO - API KEY beillesztése
+# try: 
+#   url = f"https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/retrievebulkdataset?&key=JG5A6TC3EWVAZC5W6P3JZAUGR&taskId=ba30cdc2f912a0e7ca286e6ee6399844&zip=false"
+#   ResultBytes = urllib.request.urlopen(url)
+#   # TODO - API KEY beillesztése
   
-  # adatok beolvasása
-  data = json.load(ResultBytes)
+#   # adatok beolvasása
+#   data = json.load(ResultBytes)
         
-except urllib.error.HTTPError  as e:
-  ErrorInfo= e.read().decode() 
-  print('Error code: ', e.code, ErrorInfo)
-  sys.exit()
-except  urllib.error.URLError as e:
-  ErrorInfo= e.read().decode() 
-  print('Error code: ', e.code,ErrorInfo)
-  sys.exit()
+# except Exception as e:
+#     print('Error:', e)
+#     sys.exit()
+# except urllib.error.URLError as e:
+#     print('Error reason:', e.reason)
+#     sys.exit()
 
+with open('hungary30days.txt') as f:
+    data = json.load(f)
 
 # 2. Adatfeldolgozás, adattisztítás
 #releváns adatok kinyerése a válaszból
-temperature = data["days"][0]["temp"]
-humidity = data["days"][0]["humidity"]
-pressure = data["days"][0]["pressure"]
+dates = []
+temperatures = []
+humidities = []
+pressures = []
+
+
+for day in data["days"]:
+    dates.append(day["datetime"])
+    temperatures.append(day["temp"])
+    humidities.append(day["humidity"])
+    pressures.append(day["pressure"])
+    
 
 
 from sklearn.preprocessing import StandardScaler
@@ -54,14 +63,22 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
+df = pd.DataFrame({
+    'date': dates,
+    'temperature': temperatures,
+    'humidity': humidities,
+    'pressure': pressures
+})
 
-df = pd.DataFrame({'temperature': [temperature],
-                   'humidity': [humidity],
-                   'pressure': [pressure],
-                   'target': [0]})
 
-X = preprocessor.fit_transform(df.drop('target', axis=1))
-y = df['target']
+target = 'temperature'
+
+features = ['humidity', 'pressure']
+
+X = df[features]
+y = df[target]
+
+X = preprocessor.fit_transform(X)
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
@@ -84,6 +101,17 @@ def evaluate_model(model, X_test, y_test):
 
 evaluate_model(model, X_test, y_test)   
 
+def make_predictions(model, preprocessor, temperatures, humidities, pressures):
+    predictions = []
+    for i in range(len(temperatures)):
+        input_data = pd.DataFrame({'temperature': [temperatures[i]],
+                                   'humidity': [humidities[i]],
+                                   'pressure': [pressures[i]]})
+        input_data = preprocessor.transform(input_data)
+        prediction = model.predict(input_data)
+        predictions.append(prediction[0])
+
+    return predictions
 
 # 5. Adat vizualizáció
 import matplotlib.pyplot as plt
@@ -101,6 +129,8 @@ def extract_weather_data(data):
         sys.exit()
 
 dates, temperatures, humidities, pressures = extract_weather_data(data)
+
+predictions = make_predictions(model, preprocessor, temperatures, humidities, pressures)
 
 # Új ábra létrehozása
 def plot_weather_data(dates, temperatures, humidities, pressures):

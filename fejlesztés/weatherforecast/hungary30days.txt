@@ -1,0 +1,228 @@
+{
+  "latitude" : 47.4997,
+  "longitude" : 19.0551,
+  "resolvedAddress" : "Magyarország",
+  "address" : "Hungary",
+  "timezone" : "Europe/Budapest",
+  "tzoffset" : 2.0,
+  "name" : "Hungary",
+  "days" : [ {
+    "datetime" : "2023-10-05",
+    "temp" : 15.3,
+    "humidity" : 63.1,
+    "snow" : 0.0,
+    "pressure" : 1025.8,
+    "windspeedmax" : 12.8
+  }, {
+    "datetime" : "2023-10-06",
+    "temp" : 15.7,
+    "humidity" : 60.4,
+    "snow" : 0.0,
+    "pressure" : 1026.1,
+    "windspeedmax" : 11.5
+  }, {
+    "datetime" : "2023-10-07",
+    "temp" : 16.7,
+    "humidity" : 61.2,
+    "snow" : 0.0,
+    "pressure" : 1022.2,
+    "windspeedmax" : 17.3
+  }, {
+    "datetime" : "2023-10-08",
+    "temp" : 17.4,
+    "humidity" : 48.2,
+    "snow" : 0.0,
+    "pressure" : 1019.5,
+    "windspeedmax" : 27.0
+  }, {
+    "datetime" : "2023-10-09",
+    "temp" : 11.3,
+    "humidity" : 59.1,
+    "snow" : 0.0,
+    "pressure" : 1023.3,
+    "windspeedmax" : 15.2
+  }, {
+    "datetime" : "2023-10-10",
+    "temp" : 11.0,
+    "humidity" : 82.1,
+    "snow" : 0.0,
+    "pressure" : 1022.4,
+    "windspeedmax" : 7.8
+  }, {
+    "datetime" : "2023-10-11",
+    "temp" : 15.3,
+    "humidity" : 80.6,
+    "snow" : 0.0,
+    "pressure" : 1023.5,
+    "windspeedmax" : 13.9
+  }, {
+    "datetime" : "2023-10-12",
+    "temp" : 16.7,
+    "humidity" : 73.3,
+    "snow" : 0.0,
+    "pressure" : 1019.6,
+    "windspeedmax" : 12.7
+  }, {
+    "datetime" : "2023-10-13",
+    "temp" : 18.7,
+    "humidity" : 74.2,
+    "snow" : 0.0,
+    "pressure" : 1018.6,
+    "windspeedmax" : 8.8
+  }, {
+    "datetime" : "2023-10-14",
+    "temp" : 18.0,
+    "humidity" : 73.8,
+    "snow" : 0.0,
+    "pressure" : 1013.0,
+    "windspeedmax" : 12.5
+  }, {
+    "datetime" : "2023-10-15",
+    "temp" : 13.0,
+    "humidity" : 70.3,
+    "snow" : 0.0,
+    "pressure" : 1014.7,
+    "windspeedmax" : 20.6
+  }, {
+    "datetime" : "2023-10-16",
+    "temp" : 8.5,
+    "humidity" : 64.3,
+    "snow" : 0.0,
+    "pressure" : 1022.1,
+    "windspeedmax" : 21.3
+  }, {
+    "datetime" : "2023-10-17",
+    "temp" : 7.1,
+    "humidity" : 66.7,
+    "snow" : 0.0,
+    "pressure" : 1022.3,
+    "windspeedmax" : 6.4
+  }, {
+    "datetime" : "2023-10-18",
+    "temp" : 7.8,
+    "humidity" : 69.1,
+    "snow" : 0.0,
+    "pressure" : 1018.6,
+    "windspeedmax" : 9.6
+  }, {
+    "datetime" : "2023-10-19",
+    "temp" : 9.7,
+    "humidity" : 86.3,
+    "snow" : 0.0,
+    "pressure" : 1006.9,
+    "windspeedmax" : 10.0
+  }, {
+    "datetime" : "2023-10-20",
+    "temp" : 19.6,
+    "humidity" : 66.8,
+    "snow" : 0.0,
+    "pressure" : 996.3,
+    "windspeedmax" : 23.6
+  }, {
+    "datetime" : "2023-10-21",
+    "temp" : 19.3,
+    "humidity" : 73.8,
+    "snow" : 0.0,
+    "pressure" : 1003.0,
+    "windspeedmax" : 28.9
+  }, {
+    "datetime" : "2023-10-22",
+    "temp" : 15.2,
+    "humidity" : 84.9,
+    "snow" : 0.0,
+    "pressure" : 1010.3,
+    "windspeedmax" : 21.6
+  }, {
+    "datetime" : "2023-10-23",
+    "temp" : 13.7,
+    "humidity" : 80.5,
+    "snow" : 0.0,
+    "pressure" : 1017.0,
+    "windspeedmax" : 10.5
+  }, {
+    "datetime" : "2023-10-24",
+    "temp" : 14.3,
+    "humidity" : 83.8,
+    "snow" : 0.0,
+    "pressure" : 1010.6,
+    "windspeedmax" : 10.9
+  }, {
+    "datetime" : "2023-10-25",
+    "temp" : 15.1,
+    "humidity" : 81.9,
+    "snow" : 0.0,
+    "pressure" : 1002.9,
+    "windspeedmax" : 25.2
+  }, {
+    "datetime" : "2023-10-26",
+    "temp" : 13.8,
+    "humidity" : 82.4,
+    "snow" : 0.0,
+    "pressure" : 1000.5,
+    "windspeedmax" : 9.9
+  }, {
+    "datetime" : "2023-10-27",
+    "temp" : 13.9,
+    "humidity" : 89.0,
+    "snow" : 0.0,
+    "pressure" : 995.2,
+    "windspeedmax" : 29.3
+  }, {
+    "datetime" : "2023-10-28",
+    "temp" : 11.8,
+    "humidity" : 84.5,
+    "snow" : 0.0,
+    "pressure" : 1007.0,
+    "windspeedmax" : 12.1
+  }, {
+    "datetime" : "2023-10-29",
+    "temp" : 13.7,
+    "humidity" : 78.3,
+    "snow" : 0.0,
+    "pressure" : 1012.0,
+    "windspeedmax" : 23.7
+  }, {
+    "datetime" : "2023-10-30",
+    "temp" : 17.0,
+    "humidity" : 63.9,
+    "snow" : 0.0,
+    "pressure" : 1011.5,
+    "windspeedmax" : 16.6
+  }, {
+    "datetime" : "2023-10-31",
+    "temp" : 13.7,
+    "humidity" : 75.8,
+    "snow" : 0.0,
+    "pressure" : 1005.9,
+    "windspeedmax" : 22.7
+  }, {
+    "datetime" : "2023-11-01",
+    "temp" : 11.7,
+    "humidity" : 74.1,
+    "snow" : 0.0,
+    "pressure" : 1013.3,
+    "windspeedmax" : 16.5
+  }, {
+    "datetime" : "2023-11-02",
+    "temp" : 12.2,
+    "humidity" : 74.5,
+    "snow" : 0.0,
+    "pressure" : 1004.5,
+    "windspeedmax" : 29.5
+  }, {
+    "datetime" : "2023-11-03",
+    "temp" : 12.3,
+    "humidity" : 81.1,
+    "snow" : 0.0,
+    "pressure" : 992.5,
+    "windspeedmax" : 33.5
+  }, {
+    "datetime" : "2023-11-04",
+    "temp" : 8.1,
+    "humidity" : 84.0,
+    "snow" : 0.0,
+    "pressure" : 997.5,
+    "windspeedmax" : 16.6
+  } ],
+  "queryCost" : 31
+}
