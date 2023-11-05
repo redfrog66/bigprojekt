@@ -25,7 +25,7 @@ import json
 
 with open('hungary30days.txt') as f:
     data = json.load(f)
-
+print (data)
 # 2. Adatfeldolgozás, adattisztítás
 #releváns adatok kinyerése a válaszból
 dates = []
@@ -163,5 +163,3 @@ def save_model(model, preprocessor):
         print(f"Error: A mentés sikertelen{e}")
 
 save_model(model, preprocessor)
-
-
