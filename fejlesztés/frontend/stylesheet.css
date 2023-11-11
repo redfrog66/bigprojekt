@@ -23,7 +23,7 @@ body{
     text-align: center;
 }
 .wCards{
-    margin-top: 5%;
+    margin-top: 1%;
 }
 
 .today {
@@ -43,11 +43,11 @@ body{
 }
 
 .sevendaystitle {
-    margin-top: 70px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;
     font-weight: bolder;
     color: #093641;
+    margin-bottom: 0;
 }
 
 .card-title {
@@ -213,6 +213,8 @@ body{
   .signup-link a {
     text-decoration: underline;
   }
+
+  /* Login form end */
 
   /* Search bar start */
 
