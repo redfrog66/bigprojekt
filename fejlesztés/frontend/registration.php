@@ -13,25 +13,25 @@
         Register
     </h1>
 
-    <form class="form">
+    <form class="form" method="post" action="registration.php">
         <p class="form-title">Welcome here</p>
 
         <div class="input-container">
-            <input type="password" placeholder="Enter your name">
+            <input type="text" name="name" placeholder="Enter your name">
          </div>
 
         <div class="input-container">
-           <input type="email" placeholder="Enter your email">
+           <input type="email" name="username" placeholder="Enter your email">
            <span>
            </span>
         </div>
 
         <div class="input-container">
-           <input type="password" placeholder="Enter your password">
+           <input type="password" name="password" placeholder="Enter your password">
         </div>
 
 
-        <button type="submit" class="submit">
+        <button type="submit" class="submit" name="reg_btn">
          Sign in
         </button>
  
@@ -44,3 +44,22 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 </body>
 </html>
+
+<?php
+$conn= mysqli_connect("localhost","root","","websitelogin");
+if(isset($_POST['reg_btn'])){
+  $username=$_POST['username'];
+  $password=$_POST['password'];
+  $name=$_POST['name'];
+  $sql="INSERT INTO logindetails (`id`, `name`, `username`, `password`) VALUES (NULL, '".$name."' , '".$username."','".$password."')";
+  if ($conn->query($sql) === TRUE) {
+    echo "<script> alert('Registration successful'); </script>";
+  } else {
+    echo "<script> alert(' . $sql . ' ' . $conn->error. ') </script>";
+  }
+  $conn->close();
+
+  
+
+}
+?>
