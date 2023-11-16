@@ -3,21 +3,36 @@
 // run: node index.js
 
 // Első lépés: Változóban tárolt város alapján keresés
+// Második lépés: Random város keresése - egyelőre billentyűzetről olvasva, helyesen írva
+const readline = require('readline');
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+// változók: teszt_varos, api_key, url
 let teszt_varos = "Budapest"; // változóban tárolt város
-
 let api_key = "JG5A6TC3EWVAZC5W6P3JZAUGR" 
-
 let url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${teszt_varos}?unitGroup=metric&key=${api_key}&contentType=json`;
+
+// adatok kinyerése a városról
 // fetch, node.js-ben, hogy terminálon tudjam tesztelni a kódot
-import('node-fetch').then(module => { // fetch, node.js-ben, hogy terminálon tudjam tesztelni a kódot
-  module.default(url)
-    .then(response => response.json()) 
-    .then(data => {
-      console.log(data);
-    })
-    .catch(error => {
-      console.log('Error:', error);
-    });
+rl.question('Please enter the town name: ', (town) => {
+  let url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${town}?unitGroup=metric&key=${api_key}&contentType=json`;
+
+  import('node-fetch').then(module => {
+    module.default(url)
+      .then(response => response.json()) 
+      .then(data => {
+        console.log(data);
+      })
+      .catch(error => {
+        console.log('Error:', error);
+      });
+  });
+
+  rl.close();
 });
 
 // Az összes adat, amit a városról meg tudunk szerezni egy napra:
