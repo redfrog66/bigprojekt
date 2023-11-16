@@ -4,6 +4,9 @@
 
 // Első lépés: Változóban tárolt város alapján keresés
 // Második lépés: Random város keresése - egyelőre billentyűzetről olvasva, helyesen írva
+// Harmadik lépés: bekért városnév kisbetűssé alakítása, hogy ne függjön a felhasználó által beírt városnévtől (legalábbis ebből a szempontból)
+// Negyedik lépés: 7 napos időjárás előrejelzés kinyerése a városról
+
 const readline = require('readline');
 
 const rl = readline.createInterface({
@@ -15,18 +18,31 @@ const rl = readline.createInterface({
 let teszt_varos = "Budapest"; // változóban tárolt város
 let api_key = "JG5A6TC3EWVAZC5W6P3JZAUGR" 
 let url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${teszt_varos}?unitGroup=metric&key=${api_key}&contentType=json`;
-
+ 
 // adatok kinyerése a városról
 // fetch, node.js-ben, hogy terminálon tudjam tesztelni a kódot
 rl.question('Please enter the town name: ', (town) => {
 
   let lowerCaseTown = town.toLowerCase();
 
-  let url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${lowerCaseTown}?unitGroup=metric&key=${api_key}&contentType=json`;
+  let today = new Date();
+  let sevenDaysFromNow = new Date();
+  sevenDaysFromNow.setDate(today.getDate() + 7);
+
+  let startDate = today.toISOString().split('T')[0];
+  let endDate = sevenDaysFromNow.toISOString().split('T')[0];
+
+
+  let url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${lowerCaseTown}/${startDate}/${endDate}?unitGroup=metric&key=${api_key}&contentType=json`;
 
   import('node-fetch').then(module => {
     module.default(url)
-      .then(response => response.json()) 
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+      })
       .then(data => {
         console.log(data);
       })
