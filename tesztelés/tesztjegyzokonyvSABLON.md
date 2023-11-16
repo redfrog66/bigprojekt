@@ -59,7 +59,7 @@ Backend tesztelést végez: **Gellén Rebeka** és **Bukta Ádám**
    * Az alkalmazás és a backend függőségeinek verziószámai.
 
 ### 4. Tesztesetek és Esetleírások:
-   * Az egyes tesztesetek felsorolása és egyedi azonosítóikkal ellátása.
+   * Az egyes tesztesetek felsorolása és egyedi azonosítóikkal ellátása (egységtesztek és funkciók megfelelő működésének tesztje)
    * Minden tesztesethez tartozó elvárások és bemenetek leírása.
    * A tesztelés során alkalmazott adatok és konfigurációk.
    * Frontend funkciók megfelelő működésének ellenőrzése a backend szempontjából (például megfelelő elemek kerülnek átadásra a frontendről).
@@ -81,7 +81,7 @@ Backend tesztelést végez: **Gellén Rebeka** és **Bukta Ádám**
    * Tanulságok és javaslatok a jövőbeli tesztelési folyamatokra nézve.
 
 # Tesztelési jegyzőkönyv kitöltendő sablonok
-## Frontend - Felület tesztelési sablon
+## Frontend - Felület tesztelési sablon kitöltendő
 ### 1. Cím és Bevezetés:
    * Tesztjegyzőkönyv neve: 
    * A tesztelés célja és kontextusa: 
@@ -125,7 +125,7 @@ Backend tesztelést végez: **Gellén Rebeka** és **Bukta Ádám**
    * Általános megjegyzések a frontend tesztelési folyamat során szerzett tapasztalatokról: 
    * Tanulságok és javaslatok a jövőbeli tesztelési folyamatokra nézve: 
 
-## Backend - Háttér tesztelési sablon
+## Backend - Háttér tesztelési sablon kitöltendő
 
 ### 1. Cím és Bevezetés:
    * Az adott tesztjegyzőkönyv neve: 
