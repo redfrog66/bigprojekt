@@ -6,6 +6,7 @@
 // Második lépés: Random város keresése - egyelőre billentyűzetről olvasva, helyesen írva
 // Harmadik lépés: bekért városnév kisbetűssé alakítása, hogy ne függjön a felhasználó által beírt városnévtől (legalábbis ebből a szempontból)
 // Negyedik lépés: 7 napos időjárás előrejelzés kinyerése a városról
+// Ötödik lépés: specifikus adatok kinyerése a városról
 
 const readline = require('readline');
 
@@ -51,7 +52,14 @@ rl.question('Please enter the town name: ', (town) => {
         if (!data.days || data.days.length === 0) {
           console.log('No data returned. Please check the town name.');
         } else {
-          console.log(data);
+          data.days.forEach(day => {
+            console.log(`Date: ${day.datetime}, 
+                          Temperature: ${day.temp}, 
+                          Humidity: ${day.humidity}, 
+                          Icon: ${day.icon}, 
+                          Wind speed: ${day.windspeed}, 
+                          Pressure: ${day.pressure} `);
+          });
         }
       })
       .catch(error => {
