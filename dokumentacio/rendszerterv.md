@@ -1,4 +1,5 @@
 # Rendszerterv
+#TODO
 ## Rendszer:
 Az alkalmazásunk egy Web felülettel rendelkező, Python nyelven íródó időjárásjelentő és időjárás előrejelző applikáció. Széleskörben rendelkezik különböző időjárási adatokkal, például hőmérsékletet, szélsebesség, páratartalom. Ezen információk alapján pedig képes megmondani, hogy milyen ruházat lenne a legideálisabb az adott nap időjárása alapján. A felhasználóknak lehetőségük van regisztráni az oldalra, aminek köszönhetően bejelentkezhetnek, és személyre szabhatnak bizonyos dolgokat. A felületen lehetőség van átváltani Fahrenheitre is.
 
@@ -11,10 +12,10 @@ Projektünk másik célja pedig, hogy gépi tanulást segítségül hívva ponto
 User - A személy, aki aktuálisan a felületen navigál. Helyzettől függ a kiléte, lehet a tesztelő is, a megrendelő, vagy deployment után egy felhasználó. A rendszerterv ezen részében mint helytartó szó fog szerepelni.
 
 A User megnyitja a webapplikációt. Letisztult és szép felület várja, könnyen tud navigálni.
-
+#TODO
 ### Hőmérséklet
 A legfontosabb része a felületnek. Predikció útján generálunk következő 7 napi előrejelzést, de korábbi napok hőmérsékletét is meg tudjuk jeleníteni. A hőmérsékletet fokban adjuk meg, de lehetőség van átváltani Fahrenheitre is. 
-
+#TODO
 ### Szél és páratartalom
 Ezen információk is predikció útján kerülnek generálásra. A szélsebességet méter per másodpercben, a páratartalmat százalékban adjuk meg.
 
@@ -86,13 +87,13 @@ Maga a program, hozzáféréstől függően bármilyen időpontban futtatható.
 ## Erőforrások:
 
 ## Implementációs terv:
-
+#TODO
 ### Python 
 A Python egy általános célú, nagyon magas szintű programozási nyelv. A nyelv tervezési filozófiája az olvashatóságot és a programozói munka megkönnyítését helyezi előtérbe a futási sebességgel szemben. Emelett mesterséges intelligencia alapú gépi tanulásra való felhasználáshoz ajánlott mivel terjedelmes oktatóanyagok állnak rendelkezésre amelyek nagyban megkönnyítik a munkafolyamatot.
 
 ### Django
 A Django egy ingyenes és nyílt forráskódú, Python-alapú webes keretrendszer, amely a modell–sablon–nézet építészeti mintát követi. A DJango keretrendszer ehetővé teszi számunkra hogy a Python kódunk webes alapon fusson ami a felhasználói élményt növeli így a programot nem kell letölteni és telepíteni. Továbbá így bármilyen módú extra fejlesztéstől is megkíméljük a fejlesztőket hiszen a a cross platform funkcionalitás szükségét teljes mértékben kikerüljük
-
+#TODO
 ### TensorFlow
 A TensorFlow egy ingyenes és nyílt forráskódú szoftverkönyvtár gépi tanuláshoz és mesterséges intelligenciához. Használata viszonylag kézenfekvő, elsajátításhoz szükséges idő viszonylag alacsony, így egy project szempontjából előnyös.
 

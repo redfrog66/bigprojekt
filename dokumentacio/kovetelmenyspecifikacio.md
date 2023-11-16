@@ -25,7 +25,7 @@ Néhány általános jogi követelmény a programmal szemben:
 Ezen felül nem alkalmazunk helymeghatározást a projektünk során. Ennek oka, hogy túl nagy támadási felületet képezne a rendszerünkben, és a felhasználók személyes adatait is veszélyeztetné. Nagyobb rendszerekben, ahol a felhasználók személyes adatai nem kerülnek veszélybe, ott érdemes lehet alkalmazni, mivel a felhasználók számára nagyobb kényelmet biztosít, viszont esetünkben a csapat és a projekt nagy méretű bővítését igényelné, amire nincs lehetőségünk. Megfelelő erőforrások, arra alkalmas emberek és hosszabb határidő mellett érdemes lehet bevezetni a rendszerbe, így a lehetséges továbbfejlesztések között szerepel.
 
 ## Jelenlegi üzleti folyamatok modellje
-
+#TODO
 A projekt célja egy kibővített időjárásjelentő asztali alkalmazás, amely bizonyos szintig személyreszabható, és képes a felhasználók igényeinek megfelelően működni. Erősen dependens a Python programozási nyelven, illetve a TensorFlow adatbázisain, amelyeket a projekt során használni fogunk. A projekt során a csapat tagjai a következő főfeladatokat látják el:
 * TensorFlow adatbázisok tanulmányozása, adatok feldolgozása
 * Python programozási nyelv tanulmányozása, a projekt során használt modulok megismerése
@@ -38,7 +38,7 @@ A projekt célja egy kibővített időjárásjelentő asztali alkalmazás, amely
 * Bejelentkezés lehetőségének megvalósítása
 * Személyreszabhatóság lehetőségének megvalósítása
 A projekt egyéb feladatokat is tartalmazhat, amelyek a fentiekhez hasonlóak, és a projekt során merülnek fel. Bizonyos tervezett feladatok során ütközhetünk olyan problémákba, melyek befolyásolják a többi feladatot, így nem kizárt, hogy egyes felsorolt feladatok nem kerülnek megvalósításra, vagy a projekt során új feladatok merülnek fel.
-
+#TODO
 Az alkalmazás 1.0 verzió tervei a következők:
 | Verzió | Leírás                                  |
 |-------|----------------------------------------|
@@ -53,7 +53,7 @@ Az alkalmazás 1.0 verzió tervei a következők:
 ## Igényelt üzleti folyamatok modellje
 
 Az alkalmazás munkálatait több verzióra bontjuk, ugyanis egy olyan projektet szeretnénk végigvinni, amely a csapat kapacitásához mérten bővíthető. Ezzel a tervezési folyamat rugalmasságát is biztosítani tudjuk, és szilárd alapot ad a kivitelezéshez. A verziókban történő bontás segít a csapatnak a munka megtervezésében, és a feladatok megvalósításában.
-
+#TODO
 Az 1.0 verzió az, amit mindenképpen szeretnénk megvalósítani, így külön szedjük az egyéb, felhasználói élményt javító fejlesztésektől.
 Az alkalmazás 1.0 verzió tervei a következők:
 | Verzió | Leírás                                  |
@@ -92,7 +92,7 @@ Felhasználói preferencia szerint állítható, hogy C° vagy F° legyen az ado
 
 ### Napi időjárás
 Adott nap részletesebb, órákra lebontott időjárási adatai biztosítása.
-
+#TODO
 ### Hét napos előrejelzés
 Az elkövetkező hét nap időjárási predikciójának biztosítása.
 
@@ -125,9 +125,9 @@ Több várost meg lehet adni, hogy egy kattintással lehessen váltani köztük.
 Python - A Python egy általános célú, nagyon magas szintű programozási nyelv. A nyelv tervezési filozófiája az olvashatóságot és a programozói munka megkönnyítését helyezi előtérbe a futási sebességgel szemben.
 
 Django - A Django egy ingyenes és nyílt forráskódú, Python-alapú webes keretrendszer, amely a modell–sablon–nézet építészeti mintát követi.
-
+#TODO
 TensorFlow - TensorFlow egy nyílt forráskódú gépi tanulás keretrendszer, amelyet a Google fejlesztett ki. Ez egy rendkívül rugalmas platform, amely lehetővé teszi gépi tanulási modellek készítését, kiképzését és értékelését adatainkon. TensorFlow támogatja a neurális hálózatok, mély tanulás és egyéb gépi tanulási módszerek használatát széles körben.
-
+#TODO
 Predikció - A predikció mesterséges intelligencia területen azt a folyamatot jelenti, amikor egy gépi tanulási vagy mesterséges intelligencia modell előrejelzi vagy becsli egy adott esemény vagy érték valószínűségét vagy értékét a rendelkezésre álló adatok alapján. Ezek a modellek az előző adatok elemzésével és mintázatok azonosításával próbálják megjósolni jövőbeli eseményeket vagy értékeket. 
 
 API - Az API egy olyan alkalmazásprogramozási interfész (alkalmazásprogramozási felület), amely hozzáférést biztosít a szoftveres, és a hardveres erőforrások utasításkészletéhez.
