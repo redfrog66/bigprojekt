@@ -1,0 +1,1 @@
+// Visszamenő adatok hozzáférése
