@@ -39,12 +39,20 @@ rl.question('Please enter the town name: ', (town) => {
     module.default(url)
       .then(response => {
         if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
+          if (response.status === 400) {
+            throw new Error('Town name not recognized. Please check your spelling.');
+          } else {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
         }
         return response.json();
       })
       .then(data => {
-        console.log(data);
+        if (!data.days || data.days.length === 0) {
+          console.log('No data returned. Please check the town name.');
+        } else {
+          console.log(data);
+        }
       })
       .catch(error => {
         console.log('Error:', error);
