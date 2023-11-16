@@ -19,7 +19,10 @@ let url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/ser
 // adatok kinyerése a városról
 // fetch, node.js-ben, hogy terminálon tudjam tesztelni a kódot
 rl.question('Please enter the town name: ', (town) => {
-  let url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${town}?unitGroup=metric&key=${api_key}&contentType=json`;
+
+  let lowerCaseTown = town.toLowerCase();
+
+  let url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${lowerCaseTown}?unitGroup=metric&key=${api_key}&contentType=json`;
 
   import('node-fetch').then(module => {
     module.default(url)
