@@ -5,7 +5,7 @@
 Az alkalmazás célja egy időjárás előrejelző létrehozása, ami széleskörben rendelkezik különböző időjárási adatokkal. Nem csak a jővőbeli időjárással kapcsolatban jelennek meg információk, hanem képes a felhasználó visszamenőleg, múltbeli nap adatait is lekérdezni. Az alkalmazás Web felülettel fog rendelkezni, Python nyelven íródik, Django segítségével. 
 
 ## A rendszer céljai és nem céljai
-
+#TODO
 Az előrejelzést Prediction útján szeretnénk létrehozni, ehhez pedig TensowFlow-ot fogunk használni a tanításhoz. Projektünk egyik célja, hogy gépi tanulást segítségül hívva pontosabb előrejelzést tudjunk adni a felhasználóknak, miközben a felhasználói élményt is szem előtt tartjuk, illetve a csapatmunka során a csapat tagjai is fejlődjenek mind fejlesztés, mind kommunikáció és kivitelezés terén.
 
 A projektünknek aktuálisan nem célja tűpontos információkat szolgálni, erőforrásunkhoz és csapatunk méretéhez mérten vagyunk képesek felelősséget vállalni a publikált információkért. A projektünk célja, hogy egy olyan alapot adjon, amelyet később bővíteni lehet, és így egyre pontosabb információkat tudunk szolgáltatni a felhasználóknak.
@@ -29,7 +29,7 @@ Néhány általános jogi követelmény a programmal szemben:
 ## Jelenlegi üzleti folyamatok modellje
 
 A projekt célja egy kibővített időjárásjelentő asztali alkalmazás, amely bizonyos szintig személyreszabható, és képes a felhasználók igényeinek megfelelően működni. Erősen dependens a Python programozási nyelven, illetve a TensorFlow adatbázisain, amelyeket a projekt során használni fogunk. A projekt során a csapat tagjai a következő főfeladatokat látják el:
-
+#TODO
 * TensorFlow adatbázisok tanulmányozása, adatok feldolgozása
 * Python programozási nyelv tanulmányozása, a projekt során használt modulok megismerése
 * Django keretrendszer tanulmányozása, a projekt során használt modulok megismerése
@@ -44,7 +44,7 @@ A projekt célja egy kibővített időjárásjelentő asztali alkalmazás, amely
 A projekt egyéb feladatokat is tartalmazhat, amelyek a fentiekhez hasonlóak, és a projekt során merülnek fel. Bizonyos tervezett feladatok során ütközhetünk olyan problémákba, melyek befolyásolják a többi feladatot, így nem kizárt, hogy egyes felsorolt feladatok nem kerülnek megvalósításra, vagy a projekt során új feladatok merülnek fel.
 
 Az alkalmazás 1.0 verzió tervei a következők:
-
+#TODO
 | Verzió | Leírás                                  |
 |-------|----------------------------------------|
 | 1.0   | Alapvető funkcionalitások megvalósítása   |
@@ -60,7 +60,7 @@ Az alkalmazás 1.0 verzió tervei a következők:
 Az alkalmazás munkálatait több verzióra bontjuk, ugyanis egy olyan projektet szeretnénk végigvinni, amely a csapat kapacitásához mérten bővíthető. Ezzel a tervezési folyamat rugalmasságát is biztosítani tudjuk, és szilárd alapot ad a kivitelezéshez. A verziókban történő bontás segít a csapatnak a munka megtervezésében, és a feladatok megvalósításában.
 
 Az 1.0 verzió az, amit mindenképpen szeretnénk megvalósítani, így külön szedjük az egyéb, felhasználói élményt javító fejlesztésektől.
-
+#TODO
 Az alkalmazás 1.0 verzió tervei a következők:
 | Verzió | Leírás                                  |
 |-------|----------------------------------------|
@@ -100,7 +100,7 @@ Felhasználói preferencia szerint állítható, hogy C° vagy F° legyen az ado
 
 ### Napi időjárás
 Adott nap részletesebb, órákra lebontott időjárási adatai biztosítása.
-
+#TODO
 ### Hét napos előrejelzés
 Az elkövetkező hét nap időjárási predikciójának biztosítása.
 
@@ -124,7 +124,7 @@ Több várost meg lehet adni hogy egy kattintással lehessen váltani köztük.
 | Jogosultság | L2  | Mentett városok közötti váltás|1.0 | Mentett városok listájából kiválasztani a kívántat|
 
 ## Fejlesztési Folyamat
-
+#TODO
 A projekt során a csapat tagjai a következő főfeladatokat látják el:
 * TensorFlow adatbázisok tanulmányozása, adatok feldolgozása
 * Python programozási nyelv tanulmányozása, a projekt során használt modulok megismerése
@@ -207,7 +207,7 @@ meteorológia előrejelzéseiről gyakrabban, akár napi szinten szeretne tájé
 ### Celsius és Fahrenheit átváltása
 Egy képlet segítségével biztosítjuk a hőmérsékleti adatok egyszerű és gyors átváltását ami a felhasználói 
 élményt hivatott javítani, egyszerűsíteni.
-
+#TODO
 ### Napi időjárás
 A napi időjárás funkció elérhetővé teszi az adott napi időjárási predikció órákra lebontott megtekintését.
 
@@ -232,7 +232,7 @@ A tesztfolyamatnak arra alkalmas tag, idő és erőforrások hiányában nem les
 Python - A Python egy általános célú, nagyon magas szintű programozási nyelv. A nyelv tervezési filozófiája az olvashatóságot és a programozói munka megkönnyítését helyezi előtérbe a futási sebességgel szemben.
 
 Django - A Django egy ingyenes és nyílt forráskódú, Python-alapú webes keretrendszer, amely a modell–sablon–nézet építészeti mintát követi.
-
+#TODO
 TensorFlow - A TensorFlow egy ingyenes és nyílt forráskódú szoftverkönyvtár gépi tanuláshoz és mesterséges intelligenciához.
 
 API - Az API egy olyan alkalmazásprogramozási interfész (alkalmazásprogramozási felület), amely hozzáférést biztosít a szoftveres, és a hardveres erőforrások utasításkészletéhez.
