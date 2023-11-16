@@ -23,18 +23,20 @@ function celsiusToFahrenheit(celsius) {
 async function main() {
   // Celsius érték bekérése (celsiusInput) és tárolása (celsiusValue)
   var celsiusInput = await getValue('Adjon meg egy hőmérsékleti értéket Celsiusban tizedes potntosságig (pl.: 16 vagy 34.7): ');
+  // Hibakezelés ',' megadása esetében
+  celsiusInput = celsiusInput.replace(',', '.');
   var celsiusValue = parseFloat(celsiusInput);
 
   // Helyes érték ellenőrzése
   if (isNaN(celsiusValue)) {
-    console.log('Invalid input. Please enter a valid number.');
+    console.log('Helytelen érték lett megadva. Kérem adjon meg egy megfelelő értéket.');
     rl.close();
     return;
   }
 
   // °C -> °F
   var fahrenheitValue = celsiusToFahrenheit(celsiusValue);
-  
+
   // Celsius és Fahrenheit értékek megjelenítése
   console.log(`${celsiusValue.toFixed(1)} Celsius is ${fahrenheitValue.toFixed(1)} Fahrenheit`);
   console.log(`${fahrenheitValue.toFixed(1)} Fahrenheit is ${celsiusValue.toFixed(1)} Celsius`);
