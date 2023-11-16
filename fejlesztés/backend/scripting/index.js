@@ -1,13 +1,20 @@
-// Random város kereső
+// Az index page-ünkhöz tartozó scriptek helye
+/* A lényeg, hogy megadott városról nyerjük ki a számunkra szükséges adatokat az adott napon, és a rákövetkező X napra.
+  Ehhez az egyik példaprojekthez hasonlóan API hívásra támaszkodunk.
+*/
 
 // run: node index.js
 
-// Első lépés: Változóban tárolt város alapján keresés
-// Második lépés: Random város keresése - egyelőre billentyűzetről olvasva, helyesen írva
-// Harmadik lépés: bekért városnév kisbetűssé alakítása, hogy ne függjön a felhasználó által beírt városnévtől (legalábbis ebből a szempontból)
-// Negyedik lépés: 7 napos időjárás előrejelzés kinyerése a városról
-// Ötödik lépés: specifikus adatok kinyerése a városról
+/* Fejlesztés menete:
+ Első lépés: Változóban tárolt város alapján keresés
+ Második lépés: Random város keresése - egyelőre billentyűzetről olvasva, helyesen írva
+ Harmadik lépés: bekért városnév kisbetűssé alakítása, hogy ne függjön a felhasználó által beírt városnévtől (legalábbis ebből a szempontból)
+ Negyedik lépés: 7 napos időjárás előrejelzés kinyerése a városról
+ Ötödik lépés: specifikus adatok kinyerése a városról 
+ */
 
+// node.js számára szükséges konstansok
+// KONSTANSOK
 const readline = require('readline');
 
 const rl = readline.createInterface({
@@ -15,13 +22,14 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
-// változók: teszt_varos, api_key, url
-let teszt_varos = "Budapest"; // változóban tárolt város
+// vÁLTOZÓK
 let api_key = "JG5A6TC3EWVAZC5W6P3JZAUGR" 
 let url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${teszt_varos}?unitGroup=metric&key=${api_key}&contentType=json`;
  
-// adatok kinyerése a városról
-// fetch, node.js-ben, hogy terminálon tudjam tesztelni a kódot
+
+
+/*
+// NODE.JS SZÁMÁRA MEGFELELŐ VERZIÓ, MEGELŐZŐ TESZTEK ÉRDEKÉBEN
 rl.question('Please enter the town name: ', (town) => {
 
   let lowerCaseTown = town.toLowerCase();
@@ -36,7 +44,7 @@ rl.question('Please enter the town name: ', (town) => {
 
   let url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${lowerCaseTown}/${startDate}/${endDate}?unitGroup=metric&key=${api_key}&contentType=json`;
 
-  import('node-fetch').then(module => {
+  import('node-fetch').then(module => { // fetch, node.js-ben, hogy terminálon tudjam tesztelni a kódot
     module.default(url)
       .then(response => {
         if (!response.ok) {
@@ -69,6 +77,54 @@ rl.question('Please enter the town name: ', (town) => {
 
   rl.close();
 });
+*/
+// A FELÜLETTEL VALÓ ÖSSZEKAPCSOLÁSRA ALKALMAS VERZIÓ
+document.querySelector('.btn-icon-content').addEventListener('click', function() {
+  let town = document.querySelector('.input').value;
+  let lowerCaseTown = town.toLowerCase();
+
+  let today = new Date();
+  let sevenDaysFromNow = new Date();
+  sevenDaysFromNow.setDate(today.getDate() + 7);
+
+  let startDate = today.toISOString().split('T')[0];
+  let endDate = sevenDaysFromNow.toISOString().split('T')[0];
+
+  let url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${lowerCaseTown}/${startDate}/${endDate}?unitGroup=metric&key=${api_key}&contentType=json`;
+
+  fetch(url)
+    .then(response => {
+      if (!response.ok) {
+        if (response.status === 400) {
+          throw new Error('Town name not recognized. Please check your spelling.');
+        } else {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+      }
+      return response.json();
+    })
+    .then(data => {
+      if (!data.days || data.days.length === 0) {
+        console.log('No data returned. Please check the town name.');
+      } else {
+        data.days.forEach(day => {
+          console.log(`Date: ${day.datetime}, 
+                        Temperature: ${day.temp}, 
+                        Humidity: ${day.humidity}, 
+                        Icon: ${day.icon}, 
+                        Wind speed: ${day.windspeed}, 
+                        Pressure: ${day.pressure} `);
+        });
+      }
+    })
+    .catch(error => {
+      console.log('Error:', error);
+    });
+});
+
+
+
+
 
 // Az összes adat, amit a városról meg tudunk szerezni egy napra:
 /* 
