@@ -359,6 +359,14 @@ body{
     margin-top: 15px;
   }
 
+  .weather-archive-back {
+    margin: 0;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+  }
+
   .button {
     display: flex;
     justify-content: center;
