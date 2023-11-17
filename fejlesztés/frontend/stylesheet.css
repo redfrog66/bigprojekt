@@ -422,7 +422,6 @@ body{
 
 .btn-custom-archive {
     position: relative;
-    display: flex;
     align-items: center;
     justify-content: center;
     color: #e8e8e8;
@@ -453,9 +452,10 @@ body{
 .btn-custom-archive::before{
     content: "";
     position: absolute;
-    background-color: #e8e8e8;
     width: 150%;
     height: 150%;
+    left: 0%;
+    bottom: 0%;
     transform: translate(-100%, 100%) rotate(45deg);
     border-radius: 15px;
 }
