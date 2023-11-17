@@ -34,6 +34,15 @@ body{
     transform: translate(-50%, -20%);
 }
 
+.today_archive {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
 .sevendays {
     margin: 0;
     position: absolute;
@@ -400,7 +409,7 @@ body{
     border: none;
     padding: 1rem;
     border-radius: 1rem;
-    background: #e8e8e8;
+    background: #ffffff;
     box-shadow: 20px 20px 60px #c5c5c5,
        -20px -20px 60px #ffffff;
     transition: 0.3s;
@@ -409,8 +418,8 @@ body{
    }
    
    .input_arc:focus {
-    outline-color: #e8e8e8;
-    background: #e8e8e8;
+    outline-color: #abfffb;
+    background: #ffffff;
     box-shadow: inset 20px 20px 60px #c5c5c5,
        inset -20px -20px 60px #ffffff;
     transition: 0.3s;
