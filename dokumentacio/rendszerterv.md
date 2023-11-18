@@ -1,23 +1,25 @@
 # Rendszerterv
-#TODO
+
 ## Rendszer:
-Az alkalmazásunk egy Web felülettel rendelkező, Python nyelven íródó időjárásjelentő és időjárás előrejelző applikáció. Széleskörben rendelkezik különböző időjárási adatokkal, például hőmérsékletet, szélsebesség, páratartalom. Ezen információk alapján pedig képes megmondani, hogy milyen ruházat lenne a legideálisabb az adott nap időjárása alapján. A felhasználóknak lehetőségük van regisztráni az oldalra, aminek köszönhetően bejelentkezhetnek, és személyre szabhatnak bizonyos dolgokat. A felületen lehetőség van átváltani Fahrenheitre is.
+Az alkalmazásunk egy Web felülettel rendelkező, főleg JavaScript, HTML és CSS nyelven íródó időjárásjelentő és időjárás előrejelző applikáció. Széleskörben rendelkezik különböző időjárási adatokkal, például hőmérsékletet, szélsebesség, páratartalom. Ezen információk alapján pedig képes megmondani, hogy milyen ruházat lenne a legideálisabb az adott nap időjárása alapján. A felhasználóknak lehetőségük van regisztráni az oldalra, aminek köszönhetően bejelentkezhetnek, és személyre szabhatnak bizonyos dolgokat. A felületen lehetőség van átváltani Fahrenheitre is.
 
 ## Rendszer célja:
 A csapat célja egy egyszerű időjárásjelentő és időjárás előrejelző applikációt készíteni, pár egyedi csavarral.
 Projektünk másik célja pedig, hogy gépi tanulást segítségül hívva pontosabb előrejelzést tudjunk adni a felhasználóknak, miközben a felhasználói élményt is szem előtt tartjuk, illetve a csapatmunka során a csapat tagjai is fejlődjenek mind fejlesztés, mind kommunikáció és kivitelezés terén. Így tehát a projekt fő része a fejlesztők számára a tanulási folyamat, a felhasználók számára pedig a könnyű használat és az információszerzés.
+
+Mivel a fejlesztés során a gépi tanulás olyan hibára futott, amelyet nem tudtunk megoldani, ezért a projektünk nem tudja teljes mértékben betölteni a célját, de a felhasználói élményt és a könnyű használatot sikerült megvalósítani. Emellett új eszközöket kerestünk a működtetésre: a gépi tanulás helyett a predikciókat egy külső API-val oldottuk meg, amelynek köszönhetően a felhasználók számára pontosabb előrejelzést tudunk adni, gyorsabban és egyszerűbben.
 
 ## Terv:
 ### Kiindulás
 User - A személy, aki aktuálisan a felületen navigál. Helyzettől függ a kiléte, lehet a tesztelő is, a megrendelő, vagy deployment után egy felhasználó. A rendszerterv ezen részében mint helytartó szó fog szerepelni.
 
 A User megnyitja a webapplikációt. Letisztult és szép felület várja, könnyen tud navigálni.
-#TODO
+
 ### Hőmérséklet
-A legfontosabb része a felületnek. Predikció útján generálunk következő 7 napi előrejelzést, de korábbi napok hőmérsékletét is meg tudjuk jeleníteni. A hőmérsékletet fokban adjuk meg, de lehetőség van átváltani Fahrenheitre is. 
+A legfontosabb része a felületnek. Az adatokat API segítségével kapjuk meg, így a felületen csak megjelenítjük. A hőmérsékletet fokban adjuk meg, de lehetőség van átváltani Fahrenheitre is. 
 #TODO
 ### Szél és páratartalom
-Ezen információk is predikció útján kerülnek generálásra. A szélsebességet méter per másodpercben, a páratartalmat százalékban adjuk meg.
+Szintén API segítségével jutunk hozzá az információkhoz. A szélsebességet méter per másodpercben, a páratartalmat százalékban adjuk meg.
 
 ### Öltözködési tanácsok
 A hőmérséklet, szélsebesség és páratartalom alapján megmondjuk, hogy milyen ruhát érdemes felvenni. A tanácsokat a következőképpen adjuk meg:
@@ -87,13 +89,19 @@ Maga a program, hozzáféréstől függően bármilyen időpontban futtatható.
 ## Erőforrások:
 
 ## Implementációs terv:
-#TODO
+### JavaScript
+JavaScript egy programozási nyelv, amelyet általában weboldalak fejlesztéséhez használnak. A nyelvet könnyen tanulható és széles körben támogatja a böngészők. JavaScript segítségével dinamikus és interaktív felhasználói felületeket lehet létrehozni a böngészőkön keresztül.
+
+### Node.js
+Node.js egy nyílt forráskódú, szerveroldali JavaScript környezet, amely lehetővé teszi a JavaScript programok futtatását a szervereken. A Node.js egy V8 JavaScript motorra épül, amelyet eredetileg a Google Chrome böngésző számára fejlesztettek ki. Node.js általánosan használható szerveroldali alkalmazások, webszerverek, és hálózati alkalmazások fejlesztésére.
+Node.js kiválóan alkalmazható az olyan alkalmazások fejlesztéséhez, amelyeknek gyors, skálázható és könnyen karbantartható backend részre van szükségük.
+
 ### Python 
 A Python egy általános célú, nagyon magas szintű programozási nyelv. A nyelv tervezési filozófiája az olvashatóságot és a programozói munka megkönnyítését helyezi előtérbe a futási sebességgel szemben. Emelett mesterséges intelligencia alapú gépi tanulásra való felhasználáshoz ajánlott mivel terjedelmes oktatóanyagok állnak rendelkezésre amelyek nagyban megkönnyítik a munkafolyamatot.
 
 ### Django
-A Django egy ingyenes és nyílt forráskódú, Python-alapú webes keretrendszer, amely a modell–sablon–nézet építészeti mintát követi. A DJango keretrendszer ehetővé teszi számunkra hogy a Python kódunk webes alapon fusson ami a felhasználói élményt növeli így a programot nem kell letölteni és telepíteni. Továbbá így bármilyen módú extra fejlesztéstől is megkíméljük a fejlesztőket hiszen a a cross platform funkcionalitás szükségét teljes mértékben kikerüljük
-#TODO
+A Django egy ingyenes és nyílt forráskódú, Python-alapú webes keretrendszer, amely a modell–sablon–nézet építészeti mintát követi. A DJango keretrendszer ehetővé teszi számunkra hogy a Python kódunk webes alapon fusson ami a felhasználói élményt növeli így a programot nem kell letölteni és telepíteni. Továbbá így bármilyen módú extra fejlesztéstől is megkíméljük a fejlesztőket hiszen a a cross platform funkcionalitás szükségét teljes mértékben kikerüljük.
+
 ### TensorFlow
 A TensorFlow egy ingyenes és nyílt forráskódú szoftverkönyvtár gépi tanuláshoz és mesterséges intelligenciához. Használata viszonylag kézenfekvő, elsajátításhoz szükséges idő viszonylag alacsony, így egy project szempontjából előnyös.
 
@@ -101,7 +109,7 @@ A TensorFlow egy ingyenes és nyílt forráskódú szoftverkönyvtár gépi tanu
 ## 1. Működőképesség tesztelése
 Elsősorban a megírt funkciók helyes működéséről győződünk meg. Ehhez a fejlesztők különböző erőforrású számítógépeken futtatják a programot, és jegyzetet készítenek az esetleges előforduló hibákról. Ha minden számítógépen gond nélkül fut, továbbhaladhatunk a fejlesztéssel. Amennyiben egy is hibát dob, a helyzetet kielemezzük, megkeressük a befolyásoló tényezőt és kijavítjuk azt, majd csak ezután haladunk tovább.
 
-A tesztet legalább 2 különböző számítógépen végezzük el, de minél több esetet szeretnénk ellenőrizni. Akkor nevezhető a teszt sikeresnek, ha a tesztelésre használt eszközök legalább fele 2 évnél idősebb. Erre azért van szükség, mert komolyan vesszük a felhasználó-orientáltságot, és nem realisztikus az a feltevés, hogy terhelésnek alig kitett, új gépeken fogják használni a programunkat. Célunk az esélyegyenlőség, azaz, hogy bárki szabadon használni tudja a játékot.
+A tesztet legalább 2 különböző számítógépen végezzük el, de minél több esetet szeretnénk ellenőrizni. Akkor nevezhető a teszt sikeresnek, ha a tesztelésre használt eszközök legalább fele 2 évnél idősebb. Erre azért van szükség, mert komolyan vesszük a felhasználó-orientáltságot, és nem realisztikus az a feltevés, hogy terhelésnek alig kitett, új gépeken fogják használni a programunkat. Célunk az esélyegyenlőség, azaz, hogy bárki szabadon használni tudja a felületet.
 
 Ennek érdekében több féle eszközön fogjuk a tesztelést futtatni. Az elsődleges eszközök:
 | Processzor | RAM  | Életkor | Állapot  | Tesztelő |
@@ -124,7 +132,7 @@ A követelménylistánk a következő:
 | Modifikáció | M4  | Celsius/Farenthait váltás| 1.0 | Celsius vagy Farenheit preferncia megadása|
 | Statisztika | S1  | Napi időjárás     | 1.0 | Napi időjárás kimutatása |
 | Statisztika | S2  | Hét napos időjárás| 1.0 | Hét nap időjárásának kimutatása              |
-| Statisztika | S3  | Korábbi adatok | 1.0 | Az elmúlt évek adatai az adott napra vonatkozóan kimutatva              |
+| Statisztika | S3  | Korábbi adatok | 1.0 | Az elmúlt 30 nap adatai az adott napra vonatkozóan kimutatva              |
 | Jogosultság | L2  | Mentett városok közötti váltás|1.0 | Mentett városok listájából kiválasztani a kívántat|
 
 Az ehhez szükséges elemek:
@@ -162,7 +170,7 @@ Külön felület kinézeti tesztet kap a sötét és a világos téma, így igé
 Gyorsan működő program az elvárásunk, ezért fontos, hogy ellenőrizzük a sebességet. A tesztelés során A működőképesség tesztelésénél sorolt eszközökön megmérjük, mennyi időt vesz igénybe az első futás.
 
 ## 5. Biztonsági teszt
-Bejelentkezés lehetséges így prioritás hogy a felhasználói adatai(mint például a városa, neve, preferenciái, jelszava) ne kerülhessen illetéktelen felek kezébe.
+Bejelentkezés lehetséges így prioritás hogy a felhasználói adatai (mint például a városa, neve, preferenciái, jelszava) ne kerülhessen illetéktelen felek kezébe.
 Futás során figyelmet fektetünk arra hogy az elárolt adatokat megfelelő módon tároljuk, szükség szerint titkosítást és/vagy egyébb eszközöket alkalmazzunk az adatok védelme érdekében.
 
 

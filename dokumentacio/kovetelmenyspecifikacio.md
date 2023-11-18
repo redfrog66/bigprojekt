@@ -2,7 +2,10 @@
 
 ## Áttekintés
 
-Az alkalmazás célja egy időjárás előrejelző létrehozása, ami széleskörben rendelkezik különböző időjárási adatokkal. Nem csak a jővőbeli időjárással kapcsolatban jelennek meg információk, hanem képes a felhasználó visszamenőleg, múltbeli nap adatait is lekérdezni. Az alkalmazás Web felülettel fog rendelkezni, Python nyelven íródik, és Django keretrendszert tervezünk használni a megvalósításhoz. Az előrejelzést Prediction útján szeretnénk létrehozni, ehhez pedig TensowFlow-ot fogunk használni a tanításhoz. Projektünk egyik célja, hogy gépi tanulást segítségül hívva pontosabb előrejelzést tudjunk adni a felhasználóknak, miközben a felhasználói élményt is szem előtt tartjuk, illetve a csapatmunka során a csapat tagjai is fejlődjenek mind fejlesztés, mind kommunikáció és kivitelezés terén. 
+Az alkalmazás célja egy időjárás előrejelző létrehozása, ami széleskörben rendelkezik különböző időjárási adatokkal. Nem csak a jővőbeli időjárással kapcsolatban jelennek meg információk, hanem képes a felhasználó visszamenőleg, múltbeli nap adatait is lekérdezni. Az alkalmazás Web felülettel fog rendelkezni, HTML/CSS nyelven íródik. Az előrejelzést Prediction útján szeretnénk létrehozni, ehhez pedig TensowFlow-ot fogunk használni a tanításhoz. Projektünk egyik célja, hogy gépi tanulást segítségül hívva pontosabb előrejelzést tudjunk adni a felhasználóknak, miközben a felhasználói élményt is szem előtt tartjuk, illetve a csapatmunka során a csapat tagjai is fejlődjenek mind fejlesztés, mind kommunikáció és kivitelezés terén. 
+
+Mivel a fejlesztés során a gépi tanulás olyan hibára futott, amelyet nem tudtunk megoldani, ezért a projektünk nem tudja teljes mértékben betölteni a célját, de a felhasználói élményt és a könnyű használatot sikerült megvalósítani. Emellett új eszközöket kerestünk a működtetésre: a gépi tanulás helyett a predikciókat egy külső API-val oldottuk meg, amelynek köszönhetően a felhasználók számára pontosabb előrejelzést tudunk adni, gyorsabban és egyszerűbben.
+
 
 ## Jelenlegi helyzet leírása
 
@@ -25,26 +28,29 @@ Néhány általános jogi követelmény a programmal szemben:
 Ezen felül nem alkalmazunk helymeghatározást a projektünk során. Ennek oka, hogy túl nagy támadási felületet képezne a rendszerünkben, és a felhasználók személyes adatait is veszélyeztetné. Nagyobb rendszerekben, ahol a felhasználók személyes adatai nem kerülnek veszélybe, ott érdemes lehet alkalmazni, mivel a felhasználók számára nagyobb kényelmet biztosít, viszont esetünkben a csapat és a projekt nagy méretű bővítését igényelné, amire nincs lehetőségünk. Megfelelő erőforrások, arra alkalmas emberek és hosszabb határidő mellett érdemes lehet bevezetni a rendszerbe, így a lehetséges továbbfejlesztések között szerepel.
 
 ## Jelenlegi üzleti folyamatok modellje
-#TODO
+
 A projekt célja egy kibővített időjárásjelentő asztali alkalmazás, amely bizonyos szintig személyreszabható, és képes a felhasználók igényeinek megfelelően működni. Erősen dependens a Python programozási nyelven, illetve a TensorFlow adatbázisain, amelyeket a projekt során használni fogunk. A projekt során a csapat tagjai a következő főfeladatokat látják el:
 * TensorFlow adatbázisok tanulmányozása, adatok feldolgozása
 * Python programozási nyelv tanulmányozása, a projekt során használt modulok megismerése
 * Django keretrendszer tanulmányozása, a projekt során használt modulok megismerése
-* Predikció megvalósítása
+* Predikció megvalósítása - megbukott
 * Webes felület megvalósítása
+* Adatok kinyerése külső API-val
 * Webes felület összekötése a predikció során létrehozott adatbázissal
+* Adatok összekötése a webes felülettel 
 * Regisztrációs felület megvalósítása
 * Regisztráció lehetőségének megvalósítása
 * Bejelentkezés lehetőségének megvalósítása
 * Személyreszabhatóság lehetőségének megvalósítása
+
 A projekt egyéb feladatokat is tartalmazhat, amelyek a fentiekhez hasonlóak, és a projekt során merülnek fel. Bizonyos tervezett feladatok során ütközhetünk olyan problémákba, melyek befolyásolják a többi feladatot, így nem kizárt, hogy egyes felsorolt feladatok nem kerülnek megvalósításra, vagy a projekt során új feladatok merülnek fel.
-#TODO
+
 Az alkalmazás 1.0 verzió tervei a következők:
 | Verzió | Leírás                                  |
 |-------|----------------------------------------|
 | 1.0   | Alapvető funkcionalitások megvalósítása   |
 | 1.0   | Alapvető webes felület megvalósítása     |
-| 1.0   | Alapvető predikció megvalósítása         |
+| 1.0   | Alapvető predikció megvalósítása - megbukott        |
 | 1.0   | Alapvető regisztrációs felület megvalósítása |
 | 1.0   | Alapvető bejelentkezés lehetőségének megvalósítása |
 | 1.0   | Alapvető személyreszabhatóság lehetőségének megvalósítása |
@@ -53,14 +59,14 @@ Az alkalmazás 1.0 verzió tervei a következők:
 ## Igényelt üzleti folyamatok modellje
 
 Az alkalmazás munkálatait több verzióra bontjuk, ugyanis egy olyan projektet szeretnénk végigvinni, amely a csapat kapacitásához mérten bővíthető. Ezzel a tervezési folyamat rugalmasságát is biztosítani tudjuk, és szilárd alapot ad a kivitelezéshez. A verziókban történő bontás segít a csapatnak a munka megtervezésében, és a feladatok megvalósításában.
-#TODO
+
 Az 1.0 verzió az, amit mindenképpen szeretnénk megvalósítani, így külön szedjük az egyéb, felhasználói élményt javító fejlesztésektől.
 Az alkalmazás 1.0 verzió tervei a következők:
 | Verzió | Leírás                                  |
 |-------|----------------------------------------|
 | 1.0   | Alapvető funkcionalitások megvalósítása   |
 | 1.0   | Alapvető webes felület megvalósítása     |
-| 1.0   | Alapvető predikció megvalósítása         |
+| 1.0   | Alapvető predikció megvalósítása  - megbukott       |
 | 1.0   | Alapvető regisztrációs felület megvalósítása |
 | 1.0   | Alapvető bejelentkezés lehetőségének megvalósítása |
 | 1.0   | Alapvető személyreszabhatóság lehetőségének megvalósítása |
@@ -90,11 +96,8 @@ Város hozzáadása a mentett városokhoz
 ### Celsius és Fahrenheit átváltása
 Felhasználói preferencia szerint állítható, hogy C° vagy F° legyen az adott hőmérséklet mértékegysége.
 
-### Napi időjárás
-Adott nap részletesebb, órákra lebontott időjárási adatai biztosítása.
-#TODO
 ### Hét napos előrejelzés
-Az elkövetkező hét nap időjárási predikciójának biztosítása.
+Az elkövetkező hét nap időjárási adatainak biztosítása.
 
 ### Korábbi adatok
 Több évre visszamenően megtekinthető az adott nap hőmérsékleti adatai
@@ -117,17 +120,23 @@ Több várost meg lehet adni, hogy egy kattintással lehessen váltani köztük.
 
 ## Irányított és szabad szöveges riportok szövege
 - A megrendelőnek van-e igénye sötét/világos téma közötti váltásra?   -   Nincs, viszont az akadálymentesítés okán nem vesszük ki a tervezett bővítések listájából, de megfontoljuk, hogy melyik verzió részeként valósítsuk meg.
-- A megrendelőnek van-e igénye időjárással kapcsolatos hírekre?    -      Nincs, viszont a felületünk sokszínűségének érdekében megpróbálkozunk a megvalósítással.
+- A megrendelőnek van-e igénye időjárással kapcsolatos hírekre?    -      Nincs.
 - Van-e olyan egyéb információ, amit a megrendelő szívesen látna egy időjárásjelentő oldalon?    -    Pártalom, szél, hasonlók még hasznosak lehetnek, de a fő szempont maradjon a hőmérséklet.
   
 ## Fogalomszótár
 
+JavaScript - JavaScript egy programozási nyelv, amelyet általában weboldalak fejlesztéséhez használnak. A nyelvet könnyen tanulható és széles körben támogatja a böngészők. JavaScript segítségével dinamikus és interaktív felhasználói felületeket lehet létrehozni a böngészőkön keresztül.
+
+Node.js - Node.js egy nyílt forráskódú, szerveroldali JavaScript környezet, amely lehetővé teszi a JavaScript programok futtatását a szervereken. A Node.js egy V8 JavaScript motorra épül, amelyet eredetileg a Google Chrome böngésző számára fejlesztettek ki. Node.js általánosan használható szerveroldali alkalmazások, webszerverek, és hálózati alkalmazások fejlesztésére.
+Node.js kiválóan alkalmazható az olyan alkalmazások fejlesztéséhez, amelyeknek gyors, skálázható és könnyen karbantartható backend részre van szükségük.
+
+
 Python - A Python egy általános célú, nagyon magas szintű programozási nyelv. A nyelv tervezési filozófiája az olvashatóságot és a programozói munka megkönnyítését helyezi előtérbe a futási sebességgel szemben.
 
 Django - A Django egy ingyenes és nyílt forráskódú, Python-alapú webes keretrendszer, amely a modell–sablon–nézet építészeti mintát követi.
-#TODO
+
 TensorFlow - TensorFlow egy nyílt forráskódú gépi tanulás keretrendszer, amelyet a Google fejlesztett ki. Ez egy rendkívül rugalmas platform, amely lehetővé teszi gépi tanulási modellek készítését, kiképzését és értékelését adatainkon. TensorFlow támogatja a neurális hálózatok, mély tanulás és egyéb gépi tanulási módszerek használatát széles körben.
-#TODO
+
 Predikció - A predikció mesterséges intelligencia területen azt a folyamatot jelenti, amikor egy gépi tanulási vagy mesterséges intelligencia modell előrejelzi vagy becsli egy adott esemény vagy érték valószínűségét vagy értékét a rendelkezésre álló adatok alapján. Ezek a modellek az előző adatok elemzésével és mintázatok azonosításával próbálják megjósolni jövőbeli eseményeket vagy értékeket. 
 
 API - Az API egy olyan alkalmazásprogramozási interfész (alkalmazásprogramozási felület), amely hozzáférést biztosít a szoftveres, és a hardveres erőforrások utasításkészletéhez.
