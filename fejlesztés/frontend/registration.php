@@ -46,7 +46,17 @@
 </html>
 
 <?php
-$conn= mysqli_connect("localhost","root","","websitelogin");
+$servername = "sql309.infinityfree.com";
+$dbusername = "if0_35448821";
+$dbpassword = "QrNs8vgyPq";
+try {
+  $conn = new PDO("mysql:host=$servername;port=3306;dbname=if0_35448821_websitelogin", $dbusername, $dbpassword);
+  // set the PDO error mode to exception
+  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  echo "Connected successfully";
+} catch(PDOException $e) {
+  echo "Connection failed: " . $e->getMessage();
+}
 if(isset($_POST['reg_btn'])){
   $username=$_POST['username'];
   $password=$_POST['password'];

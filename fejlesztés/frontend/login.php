@@ -39,7 +39,25 @@
 </body>
 </html>
 <?php
-$conn= mysqli_connect("localhost","root","");
+//$conn= mysqli_connect("localhost","root","");
+//$conn = mysqli_connect("sql309.infinityfree.com", "if0_35448821", "QrNs8vgyPq","if0_35448821_websitelogin");
+//if (!$conn) {
+  //die("Connection failed: " . mysqli_connect_error());
+//}
+//echo "Connected successfully";
+$servername = "sql309.infinityfree.com";
+$username = "if0_35448821";
+$password = "QrNs8vgyPq";
+try {
+  $conn = new PDO("mysql:host=$servername;port=3306;dbname=if0_35448821_websitelogin", $username, $password);
+  // set the PDO error mode to exception
+  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  echo "Connected successfully";
+} catch(PDOException $e) {
+  echo "Connection failed: " . $e->getMessage();
+}
+
+
 if(isset($_POST['login_btn'])){
   $username=$_POST['username'];
   $password=$_POST['password'];
