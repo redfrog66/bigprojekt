@@ -14,11 +14,11 @@ body{
     font-weight: bolder;
     color: #093641;
 }
-#day{
+.card-text{
     color: #093641;
     text-align: center;
 }
-#temp{
+.temp{
     color: #093641;
     text-align: center;
 }

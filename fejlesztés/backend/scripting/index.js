@@ -23,7 +23,8 @@ const rl = readline.createInterface({
 });
 
 // vÁLTOZÓK
-let api_key = "JG5A6TC3EWVAZC5W6P3JZAUGR" 
+var teszt_varos="budapest";
+var api_key = "JG5A6TC3EWVAZC5W6P3JZAUGR" 
 let url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${teszt_varos}?unitGroup=metric&key=${api_key}&contentType=json`;
  
 
@@ -79,7 +80,9 @@ rl.question('Please enter the town name: ', (town) => {
 });
 */
 // A FELÜLETTEL VALÓ ÖSSZEKAPCSOLÁSRA ALKALMAS VERZIÓ
-document.querySelector('.btn-icon-content').addEventListener('click', function() {
+//document.querySelector('.btn-icon-content').addEventListener('click', function() {
+  function keres(){
+  var api_key = "JG5A6TC3EWVAZC5W6P3JZAUGR" 
   let town = document.querySelector('.input').value;
   let lowerCaseTown = town.toLowerCase();
 
@@ -90,8 +93,8 @@ document.querySelector('.btn-icon-content').addEventListener('click', function()
   let startDate = today.toISOString().split('T')[0];
   let endDate = sevenDaysFromNow.toISOString().split('T')[0];
 
+  //let url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${lowerCaseTown}/${startDate}/${endDate}?unitGroup=metric&key=${api_key}&contentType=json`;
   let url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${lowerCaseTown}/${startDate}/${endDate}?unitGroup=metric&key=${api_key}&contentType=json`;
-
   fetch(url)
     .then(response => {
       if (!response.ok) {
@@ -108,19 +111,37 @@ document.querySelector('.btn-icon-content').addEventListener('click', function()
         console.log('No data returned. Please check the town name.');
       } else {
         data.days.forEach(day => {
+          let splited = day.datetime.split("-");
+          var test = new Date(splited[0],splited[1]-1,splited[2]);
+          console.log(test);
+          var ma=new Date();
+          ma=new Date(ma.getFullYear(),ma.getMonth(),ma.getDate())
+          console.log(ma);
+          
+          if(test=ma){
+            console.log("csináld");
+          document.getElementById("temp1").innerHTML=`<b>Temperature:</b> ${day.temp} °C`;
+          document.getElementById("hum1").innerHTML=`<b>Humidity:</b> ${day.humidity}%`;
+          document.getElementById("pres1").innerHTML=`<b>Pressure:</b> ${day.pressure}mb`;
+          }
+          
+          
+
+          
           console.log(`Date: ${day.datetime}, 
                         Temperature: ${day.temp}, 
                         Humidity: ${day.humidity}, 
                         Icon: ${day.icon}, 
                         Wind speed: ${day.windspeed}, 
                         Pressure: ${day.pressure} `);
-        });
+                  });
       }
     })
     .catch(error => {
       console.log('Error:', error);
     });
-});
+};
+//);
 
 
 
