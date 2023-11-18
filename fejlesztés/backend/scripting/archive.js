@@ -11,3 +11,60 @@
     1.3 billentyűzetről beolvasott adatokat kell feldolgozni
 */
 // 2. Felülettel összeköthetővé alakítjuk a kódot
+
+// ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//1.1 Adott városra - azaz az index.js már működő kódjának átvétele
+// NODE.JS SZÁMÁRA MEGFELELŐ VERZIÓ, MEGELŐZŐ TESZTEK ÉRDEKÉBEN
+const readline = require('readline');
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+let api_key = "JG5A6TC3EWVAZC5W6P3JZAUGR" 
+
+rl.question('Please enter the town name: ', (town) => {
+
+    let lowerCaseTown = town.toLowerCase();
+  
+    let testDay = new Date();
+  
+    let testDate = testDay.toISOString().split('T')[0];
+
+  
+    let url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${lowerCaseTown}/${testDate}?unitGroup=metric&key=${api_key}&contentType=json`;
+  
+    import('node-fetch').then(module => { // fetch, node.js-ben, hogy terminálon tudjam tesztelni a kódot
+      module.default(url)
+        .then(response => {
+          if (!response.ok) {
+            if (response.status === 400) {
+              throw new Error('Town name not recognized. Please check your spelling.');
+            } else {
+              throw new Error(`HTTP error! status: ${response.status}`);
+            }
+          }
+          return response.json();
+        })
+        .then(data => {
+          if (!data.days || data.days.length === 0) {
+            console.log('No data returned. Please check the town name.');
+          } else {
+            data.days.forEach(day => {
+              console.log(`Date: ${day.datetime}, 
+                            Temperature: ${day.temp}, 
+                            Humidity: ${day.humidity}, 
+                            Icon: ${day.icon}, 
+                            Wind speed: ${day.windspeed}, 
+                            Pressure: ${day.pressure} `);
+            });
+          }
+        })
+        .catch(error => {
+          console.log('Error:', error);
+        });
+    });
+  
+    rl.close();
+  });
