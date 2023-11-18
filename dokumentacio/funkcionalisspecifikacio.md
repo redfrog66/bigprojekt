@@ -5,8 +5,9 @@
 Az alkalmazás célja egy időjárás előrejelző létrehozása, ami széleskörben rendelkezik különböző időjárási adatokkal. Nem csak a jővőbeli időjárással kapcsolatban jelennek meg információk, hanem képes a felhasználó visszamenőleg, múltbeli nap adatait is lekérdezni. Az alkalmazás Web felülettel fog rendelkezni, Python nyelven íródik, Django segítségével. 
 
 ## A rendszer céljai és nem céljai
-#TODO
 Az előrejelzést Prediction útján szeretnénk létrehozni, ehhez pedig TensowFlow-ot fogunk használni a tanításhoz. Projektünk egyik célja, hogy gépi tanulást segítségül hívva pontosabb előrejelzést tudjunk adni a felhasználóknak, miközben a felhasználói élményt is szem előtt tartjuk, illetve a csapatmunka során a csapat tagjai is fejlődjenek mind fejlesztés, mind kommunikáció és kivitelezés terén.
+
+Mivel a fejlesztés során a gépi tanulás olyan hibára futott, amelyet nem tudtunk megoldani, ezért a projektünk nem tudja teljes mértékben betölteni a célját, de a felhasználói élményt és a könnyű használatot sikerült megvalósítani. Emellett új eszközöket kerestünk a működtetésre: a gépi tanulás helyett a predikciókat egy külső API-val oldottuk meg, amelynek köszönhetően a felhasználók számára pontosabb előrejelzést tudunk adni, gyorsabban és egyszerűbben.
 
 A projektünknek aktuálisan nem célja tűpontos információkat szolgálni, erőforrásunkhoz és csapatunk méretéhez mérten vagyunk képesek felelősséget vállalni a publikált információkért. A projektünk célja, hogy egy olyan alapot adjon, amelyet később bővíteni lehet, és így egyre pontosabb információkat tudunk szolgáltatni a felhasználóknak.
 
@@ -28,14 +29,16 @@ Néhány általános jogi követelmény a programmal szemben:
 
 ## Jelenlegi üzleti folyamatok modellje
 
-A projekt célja egy kibővített időjárásjelentő asztali alkalmazás, amely bizonyos szintig személyreszabható, és képes a felhasználók igényeinek megfelelően működni. Erősen dependens a Python programozási nyelven, illetve a TensorFlow adatbázisain, amelyeket a projekt során használni fogunk. A projekt során a csapat tagjai a következő főfeladatokat látják el:
-#TODO
+A projekt célja egy kibővített időjárásjelentő asztali alkalmazás, amely bizonyos szintig személyreszabható, és képes a felhasználók igényeinek megfelelően működni. A projekt során a csapat tagjai a következő főfeladatokat látják el:
+
 * TensorFlow adatbázisok tanulmányozása, adatok feldolgozása
 * Python programozási nyelv tanulmányozása, a projekt során használt modulok megismerése
 * Django keretrendszer tanulmányozása, a projekt során használt modulok megismerése
-* Predikció megvalósítása
+* Predikció megvalósítása - megbukott
 * Webes felület megvalósítása
+* Adatok kinyerése külső API-val
 * Webes felület összekötése a predikció során létrehozott adatbázissal
+* Adatok összekötése a webes felülettel 
 * Regisztrációs felület megvalósítása
 * Regisztráció lehetőségének megvalósítása
 * Bejelentkezés lehetőségének megvalósítása
@@ -44,12 +47,12 @@ A projekt célja egy kibővített időjárásjelentő asztali alkalmazás, amely
 A projekt egyéb feladatokat is tartalmazhat, amelyek a fentiekhez hasonlóak, és a projekt során merülnek fel. Bizonyos tervezett feladatok során ütközhetünk olyan problémákba, melyek befolyásolják a többi feladatot, így nem kizárt, hogy egyes felsorolt feladatok nem kerülnek megvalósításra, vagy a projekt során új feladatok merülnek fel.
 
 Az alkalmazás 1.0 verzió tervei a következők:
-#TODO
+
 | Verzió | Leírás                                  |
 |-------|----------------------------------------|
 | 1.0   | Alapvető funkcionalitások megvalósítása   |
 | 1.0   | Alapvető webes felület megvalósítása     |
-| 1.0   | Alapvető predikció megvalósítása         |
+| 1.0   | Alapvető predikció megvalósítása - megbukott        |
 | 1.0   | Alapvető regisztrációs felület megvalósítása |
 | 1.0   | Alapvető bejelentkezés lehetőségének megvalósítása |
 | 1.0   | Alapvető személyreszabhatóság lehetőségének megvalósítása |
@@ -60,13 +63,13 @@ Az alkalmazás 1.0 verzió tervei a következők:
 Az alkalmazás munkálatait több verzióra bontjuk, ugyanis egy olyan projektet szeretnénk végigvinni, amely a csapat kapacitásához mérten bővíthető. Ezzel a tervezési folyamat rugalmasságát is biztosítani tudjuk, és szilárd alapot ad a kivitelezéshez. A verziókban történő bontás segít a csapatnak a munka megtervezésében, és a feladatok megvalósításában.
 
 Az 1.0 verzió az, amit mindenképpen szeretnénk megvalósítani, így külön szedjük az egyéb, felhasználói élményt javító fejlesztésektől.
-#TODO
+
 Az alkalmazás 1.0 verzió tervei a következők:
 | Verzió | Leírás                                  |
 |-------|----------------------------------------|
 | 1.0   | Alapvető funkcionalitások megvalósítása   |
 | 1.0   | Alapvető webes felület megvalósítása     |
-| 1.0   | Alapvető predikció megvalósítása         |
+| 1.0   | Alapvető predikció megvalósítása - megbukott        |
 | 1.0   | Alapvető regisztrációs felület megvalósítása |
 | 1.0   | Alapvető bejelentkezés lehetőségének megvalósítása |
 | 1.0   | Alapvető személyreszabhatóság lehetőségének megvalósítása |
@@ -79,6 +82,7 @@ Az alkalmazás 2.0 verzió tervei a következők:
 | 2.0   | Személyreszabhatóság bővítése   |
 | 2.0   | Értesítő küldése kiválasztott napokról  |
 | 2.0   | Esetleges új design elemek a felületen  |
+| 2.0   | Predikció javítása |
 
 
 ## Követelmény lista
@@ -98,14 +102,11 @@ Város hozzáadása a mentett városokhoz
 ### Celsius és Fahrenheit átváltása
 Felhasználói preferencia szerint állítható, hogy C° vagy F° legyen az adott hőmérséklet mértékegysége.
 
-### Napi időjárás
-Adott nap részletesebb, órákra lebontott időjárási adatai biztosítása.
-#TODO
 ### Hét napos előrejelzés
-Az elkövetkező hét nap időjárási predikciójának biztosítása.
+Az elkövetkező hét nap időjárási adatának biztosítása.
 
 ### Korábbi adatok
-Több évre visszamenően megtekinthető az adott nap hőmérsékleti adatai
+Több napra visszamenően megtekinthető az adott nap hőmérsékleti adatai
 
 ### Mentett városok közötti választás
 Több várost meg lehet adni hogy egy kattintással lehessen váltani köztük.
@@ -120,18 +121,18 @@ Több várost meg lehet adni hogy egy kattintással lehessen váltani köztük.
 | Modifikáció | M4  | Celsius/Farenthait váltás| 1.0 | Celsius vagy Farenheit preferncia megadása|
 | Statisztika | S1  | Napi időjárás     | 1.0 | Napi időjárás kimutatása |
 | Statisztika | S2  | Hét napos időjárás| 1.0 | Hét nap időjárásának kimutatása              |
-| Statisztika | S3  | Korábbi adatok | 1.0 | Az elmúlt évek adatai az adott napra vonatkozóan kimutatva              |
+| Statisztika | S3  | Korábbi adatok | 1.0 | Az elmúlt 30 nap adatai az adott napra vonatkozóan kimutatva              |
 | Jogosultság | L2  | Mentett városok közötti váltás|1.0 | Mentett városok listájából kiválasztani a kívántat|
 
 ## Fejlesztési Folyamat
-#TODO
-A projekt során a csapat tagjai a következő főfeladatokat látják el:
-* TensorFlow adatbázisok tanulmányozása, adatok feldolgozása
+ TensorFlow adatbázisok tanulmányozása, adatok feldolgozása
 * Python programozási nyelv tanulmányozása, a projekt során használt modulok megismerése
 * Django keretrendszer tanulmányozása, a projekt során használt modulok megismerése
-* Predikció megvalósítása
+* Predikció megvalósítása - megbukott
 * Webes felület megvalósítása
+* Adatok kinyerése külső API-val
 * Webes felület összekötése a predikció során létrehozott adatbázissal
+* Adatok összekötése a webes felülettel 
 * Regisztrációs felület megvalósítása
 * Regisztráció lehetőségének megvalósítása
 * Bejelentkezés lehetőségének megvalósítása
@@ -207,17 +208,13 @@ meteorológia előrejelzéseiről gyakrabban, akár napi szinten szeretne tájé
 ### Celsius és Fahrenheit átváltása
 Egy képlet segítségével biztosítjuk a hőmérsékleti adatok egyszerű és gyors átváltását ami a felhasználói 
 élményt hivatott javítani, egyszerűsíteni.
-#TODO
-### Napi időjárás
-A napi időjárás funkció elérhetővé teszi az adott napi időjárási predikció órákra lebontott megtekintését.
+
 
 ### Hét napos előrejelzés
-A hét napos előrejelzés az elkövetkezendő hét napról kínál információt a felhasználónka, ezáltal hivatott 
-megkönnyíteni az el előtervezést, programok szervezését.
+A hét napos előrejelzés az elkövetkezendő hét napról kínál információt a felhasználónka, ezáltal hivatott megkönnyíteni az el előtervezést, programok szervezését.
 
 ### Korábbi adatok
-A korábbi adatok a pontos, megtörtént időjárási előzmény elérését biztosítja a felhasználónak, 
-ezáltal pontosabb képet kaphat az elkövetkezendő napokról is.
+A korábbi adatok a pontos, megtörtént időjárási előzmény elérését biztosítja a felhasználónak, ezáltal pontosabb képet kaphat az elkövetkezendő napokról is.
 
 ### Mentett városok közötti választás
 Az "új város" funkcióval elmentett települések közötti gyors és kényelmes váltást hivatott biztosítani.
@@ -225,15 +222,20 @@ Az "új város" funkcióval elmentett települések közötti gyors és kényelm
 ## Teszttervek
 A teszttervek részleteit a rendszerterv fogja tartalmazni. Megfelelő teszttervek írása előtt még az aktuálisnál is pontosabb információkra van szükségünk a fejlesztéssel kapcsolatban.
 
-A tesztfolyamatnak arra alkalmas tag, idő és erőforrások hiányában nem lesz része a penetrációs teszt. Jelenlegi elgondolás szerint egységtesztek a python nyelven írt funkciókra fognak készülni. A tesztjegyzőkönyvben főleg felhasználás során előforduló hibákat szeretnénk kiszűrni.
+A tesztfolyamatnak arra alkalmas tag, idő és erőforrások hiányában nem lesz része a penetrációs teszt. Jelenlegi elgondolás szerint egységtesztek a JavaScript nyelven írt funkciókra fognak készülni. A tesztjegyzőkönyvben főleg felhasználás során előforduló hibákat szeretnénk kiszűrni.
 
 ## Fogalomszótár
 
-Python - A Python egy általános célú, nagyon magas szintű programozási nyelv. A nyelv tervezési filozófiája az olvashatóságot és a programozói munka megkönnyítését helyezi előtérbe a futási sebességgel szemben.
+JavaScript - JavaScript egy programozási nyelv, amelyet általában weboldalak fejlesztéséhez használnak. A nyelvet könnyen tanulható és széles körben támogatja a böngészők. JavaScript segítségével dinamikus és interaktív felhasználói felületeket lehet létrehozni a böngészőkön keresztül.
 
-Django - A Django egy ingyenes és nyílt forráskódú, Python-alapú webes keretrendszer, amely a modell–sablon–nézet építészeti mintát követi.
-#TODO
-TensorFlow - A TensorFlow egy ingyenes és nyílt forráskódú szoftverkönyvtár gépi tanuláshoz és mesterséges intelligenciához.
+Node.js - Node.js egy nyílt forráskódú, szerveroldali JavaScript környezet, amely lehetővé teszi a JavaScript programok futtatását a szervereken. A Node.js egy V8 JavaScript motorra épül, amelyet eredetileg a Google Chrome böngésző számára fejlesztettek ki. Node.js általánosan használható szerveroldali alkalmazások, webszerverek, és hálózati alkalmazások fejlesztésére.
+Node.js kiválóan alkalmazható az olyan alkalmazások fejlesztéséhez, amelyeknek gyors, skálázható és könnyen karbantartható backend részre van szükségük.
+
+Python - A Python egy általános célú, nagyon magas szintű programozási nyelv. A nyelv tervezési filozófiája az olvashatóságot és a programozói munka megkönnyítését helyezi előtérbe a futási sebességgel szemben. Emelett mesterséges intelligencia alapú gépi tanulásra való felhasználáshoz ajánlott mivel terjedelmes oktatóanyagok állnak rendelkezésre amelyek nagyban megkönnyítik a munkafolyamatot.
+
+Django -  A Django egy ingyenes és nyílt forráskódú, Python-alapú webes keretrendszer, amely a modell–sablon–nézet építészeti mintát követi. A DJango keretrendszer ehetővé teszi számunkra hogy a Python kódunk webes alapon fusson ami a felhasználói élményt növeli így a programot nem kell letölteni és telepíteni. Továbbá így bármilyen módú extra fejlesztéstől is megkíméljük a fejlesztőket hiszen a a cross platform funkcionalitás szükségét teljes mértékben kikerüljük.
+
+TensorFlow - A TensorFlow egy ingyenes és nyílt forráskódú szoftverkönyvtár gépi tanuláshoz és mesterséges intelligenciához. Használata viszonylag kézenfekvő, elsajátításhoz szükséges idő viszonylag alacsony, így egy project szempontjából előnyös.
 
 API - Az API egy olyan alkalmazásprogramozási interfész (alkalmazásprogramozási felület), amely hozzáférést biztosít a szoftveres, és a hardveres erőforrások utasításkészletéhez.
 
