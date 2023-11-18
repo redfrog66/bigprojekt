@@ -116,18 +116,58 @@ rl.question('Please enter the town name: ', (town) => {
           console.log(test);
           var ma=new Date();
           ma=new Date(ma.getFullYear(),ma.getMonth(),ma.getDate())
-          console.log(ma);
+          var ma1=new Date(ma);
+          ma1.setDate(ma.getDate()+1);
+          var ma2=new Date(ma);
+          ma2.setDate(ma.getDate()+2);
+          var ma3=new Date(ma);
+          ma3.setDate(ma.getDate()+3);
+          var ma4=new Date(ma);
+          ma4.setDate(ma.getDate()+4);
+          var ma5=new Date(ma);
+          ma5.setDate(ma.getDate()+5);
+          var ma6=new Date(ma);
+          ma6.setDate(ma.getDate()+6);
+          var ma7=new Date(ma);
+          ma7.setDate(ma.getDate()+7);
+
           
-          if(test=ma){
-            console.log("csináld");
+          
+          if(test.getTime()==ma.getTime()){
           document.getElementById("temp1").innerHTML=`<b>Temperature:</b> ${day.temp} °C`;
           document.getElementById("hum1").innerHTML=`<b>Humidity:</b> ${day.humidity}%`;
           document.getElementById("pres1").innerHTML=`<b>Pressure:</b> ${day.pressure}mb`;
           }
-          
-          
+          if(test.getTime()==ma1.getTime()){
+            document.getElementById("temp2").innerHTML=`${day.temp} °C`;
+            document.getElementById("date2").innerHTML=`${day.datetime}`;
+          }
+          if(test.getTime()==ma2.getTime()){
+            document.getElementById("temp3").innerHTML=`${day.temp} °C`;
+            document.getElementById("date3").innerHTML=`${day.datetime}`;
+          }
+          if(test.getTime()==ma3.getTime()){
+            document.getElementById("temp4").innerHTML=`${day.temp} °C`;
+            document.getElementById("date4").innerHTML=`${day.datetime}`;
+          }
+          if(test.getTime()==ma4.getTime()){
+            document.getElementById("temp5").innerHTML=`${day.temp} °C`;
+            document.getElementById("date5").innerHTML=`${day.datetime}`;
+          }
+          if(test.getTime()==ma5.getTime()){
+            document.getElementById("temp6").innerHTML=`${day.temp} °C`;
+            document.getElementById("date6").innerHTML=`${day.datetime}`;
+          }
+          if(test.getTime()==ma6.getTime()){
+            document.getElementById("temp7").innerHTML=`${day.temp} °C`;
+            document.getElementById("date7").innerHTML=`${day.datetime}`;
+          }
+          if(test.getTime()==ma7.getTime()){
+            document.getElementById("temp8").innerHTML=`${day.temp} °C`;
+            document.getElementById("date8").innerHTML=`${day.datetime}`;
+          }
 
-          
+
           console.log(`Date: ${day.datetime}, 
                         Temperature: ${day.temp}, 
                         Humidity: ${day.humidity}, 
