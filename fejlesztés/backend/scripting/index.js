@@ -23,6 +23,7 @@ const rl = readline.createInterface({
 });
 
 // vÁLTOZÓK
+var cels=true;
 var teszt_varos="budapest";
 var api_key = "JG5A6TC3EWVAZC5W6P3JZAUGR" 
 let url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${teszt_varos}?unitGroup=metric&key=${api_key}&contentType=json`;
@@ -227,3 +228,59 @@ rl.question('Please enter the town name: ', (town) => {
       source: 'comb',
       hours: [Array]
 */
+function convert(){
+  if(!cels){
+    let temps= document.getElementsByClassName("temps");
+    cels=true;
+    document.getElementById("convert").innerText=" váltás °C-re";
+    var faren;
+    for(let i = 0; i<temps.length;i++){
+      faren=temps[i].textContent.split(" ")[0];
+      console.log(faren);
+      console.log((faren*1.8)+32);
+      faren=Math.round((faren*1.8)+32,1);
+      temps[i].innerHTML=`${faren} °F`;
+    }
+    
+  }else{
+    let temps= document.getElementsByClassName("temps");
+    cels=false;
+    document.getElementById("convert").innerText=" váltás °F-re";
+    var celsius;
+    for(let i = 0; i<temps.length;i++){
+      celsius=temps[i].textContent.split(" ")[0];
+      console.log(celsius);
+      console.log((celsius-32)/1.8);
+      celsius = Math.round((celsius-32)/1.8,1);
+      temps[i].innerHTML=`${celsius} °C`;
+    }
+  }
+  convertKulon();
+
+}
+function convertKulon(){
+  if(!cels){
+    let temps= document.getElementsByClassName("tempskulon");
+    
+    
+    var faren;
+    for(let i = 0; i<temps.length;i++){
+      faren=temps[i].textContent.split(" ")[1];
+      console.log(faren);
+      console.log((faren*1.8)+32);
+      faren=Math.round((faren*1.8)+32,1);
+      temps[i].innerHTML=`Temperature: ${faren} °F`;
+    }
+    
+  }else{
+    let temps= document.getElementsByClassName("tempskulon");
+    var celsius;
+    for(let i = 0; i<temps.length;i++){
+      celsius=temps[i].textContent.split(" ")[1];
+      console.log(celsius);
+      console.log((celsius-32)/1.8);
+      celsius = Math.round((celsius-32)/1.8,1);
+      temps[i].innerHTML=`Temperature: ${celsius} °C`;
+    }
+  }
+}
