@@ -83,11 +83,12 @@ document.querySelector('').addEventListener('click', function() { //TODO: gomb m
     let searchDay = document.querySelector('').value; //TODO: input megfelelő azonosítója
 
     let searchDate = searchDay.toISOString().split('T')[0];
-  
+    // API hívás URL-je
     let url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${lowerCaseTown}/${searchDate}?unitGroup=metric&key=${api_key}&contentType=json`;
-  
+    // Fetch API hívás
     fetch(url)
       .then(response => {
+        // Hibakezelés
         if (!response.ok) {
           if (response.status === 400) {
             throw new Error('Town name not recognized. Please check your spelling.');
@@ -98,6 +99,7 @@ document.querySelector('').addEventListener('click', function() { //TODO: gomb m
         return response.json();
       })
       .then(data => {
+        // Adatok feldolgozása és kiírása a konzolra
         if (!data.days || data.days.length === 0) {
           console.log('No data returned. Please check the town name.');
         } else {
