@@ -1,5 +1,6 @@
+// Beolvasás a konzolról a 'readline' modullal
 const readline = require('readline');
-
+// 'readline' interfész létrehozása a konzol bemenet és kimenet használatával
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
@@ -41,7 +42,7 @@ async function main() {
   console.log(`${celsiusValue.toFixed(1)} Celsius is ${fahrenheitValue.toFixed(1)} Fahrenheit`);
   console.log(`${fahrenheitValue.toFixed(1)} Fahrenheit is ${celsiusValue.toFixed(1)} Celsius`);
 
-  // Eeadline interface bezárása
+  // Readline interface bezárása
   rl.close();
 }
 
