@@ -82,6 +82,7 @@ rl.question('Please enter the town name: ', (town) => {
 */
 // A FELÜLETTEL VALÓ ÖSSZEKAPCSOLÁSRA ALKALMAS VERZIÓ
 //document.querySelector('.btn-icon-content').addEventListener('click', function() {
+// Függvény a város időjárásának lekérdezésére
   function keres(){
   var api_key = "JG5A6TC3EWVAZC5W6P3JZAUGR" 
   let town = document.querySelector('.input').value;
@@ -95,7 +96,9 @@ rl.question('Please enter the town name: ', (town) => {
   let endDate = sevenDaysFromNow.toISOString().split('T')[0];
 
   //let url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${lowerCaseTown}/${startDate}/${endDate}?unitGroup=metric&key=${api_key}&contentType=json`;
+  // API hívás URL-je
   let url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${lowerCaseTown}/${startDate}/${endDate}?unitGroup=metric&key=${api_key}&contentType=json`;
+  // Fetch API hívás
   fetch(url)
     .then(response => {
       if (!response.ok) {
@@ -107,11 +110,13 @@ rl.question('Please enter the town name: ', (town) => {
       }
       return response.json();
     })
+    // Adatok feldolgozása és kiírása
     .then(data => {
       if (!data.days || data.days.length === 0) {
         console.log('No data returned. Please check the town name.');
       } else {
         data.days.forEach(day => {
+          // Dátumok létrehozása és összehasonlítása a jövőbeli napokkal, azonosított dátum alapján adatok frissítése
           let splited = day.datetime.split("-");
           var test = new Date(splited[0],splited[1]-1,splited[2]);
           console.log(test);
@@ -133,7 +138,7 @@ rl.question('Please enter the town name: ', (town) => {
           ma7.setDate(ma.getDate()+7);
 
           
-          
+          // Napra való speciális adatok frissítése
           if(test.getTime()==ma.getTime()){
           document.getElementById("temp1").innerHTML=`<b>Temperature:</b> ${day.temp} °C`;
           document.getElementById("hum1").innerHTML=`<b>Humidity:</b> ${day.humidity}%`;
@@ -228,12 +233,15 @@ rl.question('Please enter the town name: ', (town) => {
       source: 'comb',
       hours: [Array]
 */
+// Függvény a hőmérséklet átváltására Celsius és Fahrenheit között
 function convert(){
+  // Ellenőrzi, hogy a "cels" globális változó nincs definiálva
   if(!cels){
     let temps= document.getElementsByClassName("temps");
     cels=true;
     document.getElementById("convert").innerText=" váltás °C-re";
     var faren;
+    // Végigiterálás a "temps" elemein, Fahrenheit konverzió és frissítés az "temps" elemekben 
     for(let i = 0; i<temps.length;i++){
       faren=temps[i].textContent.split(" ")[0];
       console.log(faren);
@@ -243,6 +251,7 @@ function convert(){
     }
     
   }else{
+    // Ha a "cels" értéke hamis akkor az előző ciklussal ellentétben celsiusra váltja át az értéket
     let temps= document.getElementsByClassName("temps");
     cels=false;
     document.getElementById("convert").innerText=" váltás °F-re";
