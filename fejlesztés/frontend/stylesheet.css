@@ -24,6 +24,14 @@ body{
   color: #093641;
 }
 
+.text {
+  font-size: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+  font-weight: bolder;
+  color: #093641;
+}
+
 .card-text{
     color: #093641;
     text-align: center;
@@ -42,6 +50,14 @@ body{
     top: 20%;
     left: 50%;
     transform: translate(-50%, -20%);
+}
+
+.customize {
+  margin: 0;
+  position: absolute;
+  top:  50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .today_archive {
