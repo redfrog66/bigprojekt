@@ -534,11 +534,30 @@ body{
   }
 
 /* Archive search button end */
+
+/* Convert button start */
+
 #convert{
   position: absolute;
-  bottom: 3rem;
-  left: 3rem;
+  left: 10px;
+  top: 10px
 }
+
+.convert_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 9px 12px;
+  gap: 8px;
+  height: 40px;
+  width: 150px;
+  border: none;
+  background: #093641;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* Convert button end */
 
 /* Range start */
 

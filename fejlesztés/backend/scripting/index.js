@@ -239,7 +239,7 @@ function convert(){
   if(!cels){
     let temps= document.getElementsByClassName("temps");
     cels=true;
-    document.getElementById("convert").innerText=" váltás °C-re";
+    document.getElementById("convert").innerText="Change to °C";
     var faren;
     // Végigiterálás a "temps" elemein, Fahrenheit konverzió és frissítés az "temps" elemekben 
     for(let i = 0; i<temps.length;i++){
@@ -254,7 +254,7 @@ function convert(){
     // Ha a "cels" értéke hamis akkor az előző ciklussal ellentétben celsiusra váltja át az értéket
     let temps= document.getElementsByClassName("temps");
     cels=false;
-    document.getElementById("convert").innerText=" váltás °F-re";
+    document.getElementById("convert").innerText="Change to °F";
     var celsius;
     for(let i = 0; i<temps.length;i++){
       celsius=temps[i].textContent.split(" ")[0];
