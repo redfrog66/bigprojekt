@@ -26,7 +26,7 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 */
-
+var cels=true;
 let api_key = "JG5A6TC3EWVAZC5W6P3JZAUGR" 
 
 /*
@@ -76,13 +76,13 @@ rl.question('Please enter the town name: ', (town) => {
   });
   */
 // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-document.querySelector('').addEventListener('click', function() { //TODO: gomb megfelelő azonosítója
-    let town = document.querySelector('').value; //TODO: input megfelelő azonosítója
+function archiveSearch() { //TODO: gomb megfelelő azonosítója
+    let town = document.getElementById("varos").value; //TODO: input megfelelő azonosítója
     let lowerCaseTown = town.toLowerCase();
   
-    let searchDay = document.querySelector('').value; //TODO: input megfelelő azonosítója
+    let searchDate = document.getElementById("datum").value; //TODO: input megfelelő azonosítója
 
-    let searchDate = searchDay.toISOString().split('T')[0];
+    //let searchDate = searchDay.toISOString().split('T')[0];
     // API hívás URL-je
     let url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${lowerCaseTown}/${searchDate}?unitGroup=metric&key=${api_key}&contentType=json`;
     // Fetch API hívás
@@ -104,6 +104,10 @@ document.querySelector('').addEventListener('click', function() { //TODO: gomb m
           console.log('No data returned. Please check the town name.');
         } else {
           data.days.forEach(day => {
+            document.getElementById("temp").innerHTML=`<b>Temperature:</b> ${day.temp} °C`;
+            document.getElementById("hum").innerHTML=`<b>Humidity:</b> ${day.humidity}%`;
+            document.getElementById("pre").innerHTML=`<b>Pressure:</b> ${day.pressure}mb`;
+
             console.log(`Date: ${day.datetime}, 
                           Temperature: ${day.temp}, 
                           Humidity: ${day.humidity}, 
@@ -116,4 +120,38 @@ document.querySelector('').addEventListener('click', function() { //TODO: gomb m
       .catch(error => {
         console.log('Error:', error);
       });
-  });
+  };
+
+
+  function convertArch(){
+    // Ellenőrzi, hogy a "cels" globális változó nincs definiálva
+    if(!cels){
+      let temps= document.getElementsByClassName("temps");
+      cels=true;
+      document.getElementById("convert").innerText="Change to °C";
+      var faren;
+      // Végigiterálás a "temps" elemein, Fahrenheit konverzió és frissítés az "temps" elemekben 
+      for(let i = 0; i<temps.length;i++){
+        faren=temps[i].textContent.split(" ")[1];
+        console.log(faren);
+        console.log((faren*1.8)+32);
+        faren=Math.round((faren*1.8)+32,1);
+        temps[i].innerHTML=`<b>Temperature:</b> ${faren} °C`;
+      }
+      
+    }else{
+      // Ha a "cels" értéke hamis akkor az előző ciklussal ellentétben celsiusra váltja át az értéket
+      let temps= document.getElementsByClassName("temps");
+      cels=false;
+      document.getElementById("convert").innerText="Change to °F";
+      var celsius;
+      for(let i = 0; i<temps.length;i++){
+        celsius=temps[i].textContent.split(" ")[1];
+        console.log(celsius);
+        console.log((celsius-32)/1.8);
+        celsius = Math.round((celsius-32)/1.8,1);
+        temps[i].innerHTML=`<b>Temperature:</b> ${celsius} °C`;
+      }
+    }
+  
+  }

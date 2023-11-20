@@ -143,6 +143,7 @@ rl.question('Please enter the town name: ', (town) => {
           document.getElementById("temp1").innerHTML=`<b>Temperature:</b> ${day.temp} °C`;
           document.getElementById("hum1").innerHTML=`<b>Humidity:</b> ${day.humidity}%`;
           document.getElementById("pres1").innerHTML=`<b>Pressure:</b> ${day.pressure}mb`;
+          document.getElementById("img1").src=`${day.icon}.png`;
           }
           if(test.getTime()==ma1.getTime()){
             document.getElementById("temp2").innerHTML=`${day.temp} °C`;
@@ -278,7 +279,7 @@ function convertKulon(){
       console.log(faren);
       console.log((faren*1.8)+32);
       faren=Math.round((faren*1.8)+32,1);
-      temps[i].innerHTML=`Temperature: ${faren} °F`;
+      temps[i].innerHTML=`<b>Temperature:</b> ${faren} °C`;
     }
     
   }else{
@@ -289,7 +290,7 @@ function convertKulon(){
       console.log(celsius);
       console.log((celsius-32)/1.8);
       celsius = Math.round((celsius-32)/1.8,1);
-      temps[i].innerHTML=`Temperature: ${celsius} °C`;
+      temps[i].innerHTML=`<b>Temperature:</b> ${celsius} °F`;
     }
   }
 }
