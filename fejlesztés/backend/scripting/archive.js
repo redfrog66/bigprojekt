@@ -104,6 +104,7 @@ function archiveSearch() { //TODO: gomb megfelelő azonosítója
           console.log('No data returned. Please check the town name.');
         } else {
           data.days.forEach(day => {
+            
             document.getElementById("temp").innerHTML=`<b>Temperature:</b> ${day.temp} °C`;
             document.getElementById("hum").innerHTML=`<b>Humidity:</b> ${day.humidity}%`;
             document.getElementById("pre").innerHTML=`<b>Pressure:</b> ${day.pressure}mb`;

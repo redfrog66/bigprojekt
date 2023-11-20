@@ -143,35 +143,42 @@ rl.question('Please enter the town name: ', (town) => {
           document.getElementById("temp1").innerHTML=`<b>Temperature:</b> ${day.temp} °C`;
           document.getElementById("hum1").innerHTML=`<b>Humidity:</b> ${day.humidity}%`;
           document.getElementById("pres1").innerHTML=`<b>Pressure:</b> ${day.pressure}mb`;
-          document.getElementById("img1").src=`${day.icon}.png`;
+          document.getElementById("img1").src=`../frontend/assets/${day.icon}.png`;
           }
           if(test.getTime()==ma1.getTime()){
             document.getElementById("temp2").innerHTML=`${day.temp} °C`;
             document.getElementById("date2").innerHTML=`${day.datetime}`;
+            document.getElementById("img2").src=`../frontend/assets/${day.icon}.png`;
           }
           if(test.getTime()==ma2.getTime()){
             document.getElementById("temp3").innerHTML=`${day.temp} °C`;
             document.getElementById("date3").innerHTML=`${day.datetime}`;
+            document.getElementById("img3").src=`../frontend/assets/${day.icon}.png`;
           }
           if(test.getTime()==ma3.getTime()){
             document.getElementById("temp4").innerHTML=`${day.temp} °C`;
             document.getElementById("date4").innerHTML=`${day.datetime}`;
+            document.getElementById("img4").src=`../frontend/assets/${day.icon}.png`;
           }
           if(test.getTime()==ma4.getTime()){
             document.getElementById("temp5").innerHTML=`${day.temp} °C`;
             document.getElementById("date5").innerHTML=`${day.datetime}`;
+            document.getElementById("img5").src=`../frontend/assets/${day.icon}.png`;
           }
           if(test.getTime()==ma5.getTime()){
             document.getElementById("temp6").innerHTML=`${day.temp} °C`;
             document.getElementById("date6").innerHTML=`${day.datetime}`;
+            document.getElementById("img6").src=`../frontend/assets/${day.icon}.png`;
           }
           if(test.getTime()==ma6.getTime()){
             document.getElementById("temp7").innerHTML=`${day.temp} °C`;
             document.getElementById("date7").innerHTML=`${day.datetime}`;
+            document.getElementById("img7").src=`../frontend/assets/${day.icon}.png`;
           }
           if(test.getTime()==ma7.getTime()){
             document.getElementById("temp8").innerHTML=`${day.temp} °C`;
             document.getElementById("date8").innerHTML=`${day.datetime}`;
+            document.getElementById("img8").src=`../frontend/assets/${day.icon}.png`;
           }
 
 
