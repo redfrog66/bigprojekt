@@ -309,7 +309,7 @@ function recommendationUpdate(){
   let b=localStorage.getItem("pref"+u);
   let um=localStorage.getItem("umb"+u);
   console.log("recommend");
-  if(um){}
+  
   if(Math.round(a)<=Math.round(b)){
     document.getElementById("rec").innerText="Take a jacket with you";
     console.log(a);
@@ -320,6 +320,11 @@ function recommendationUpdate(){
     console.log(a);
     console.log(b);
     console.log("no kabát");  
+  }
+  let im=document.getElementById("img1").src.split("/");
+  if(um&&im[im.length-1]=="partly-cloudy-day.png"){
+    document.getElementById("recumb").innerText="Take an umbrella too";
+    console.log("esernyo")
   }
 }
 
