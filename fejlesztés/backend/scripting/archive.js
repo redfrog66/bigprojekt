@@ -137,7 +137,7 @@ function archiveSearch() { //TODO: gomb megfelelő azonosítója
         console.log(faren);
         console.log((faren*1.8)+32);
         faren=Math.round((faren*1.8)+32,1);
-        temps[i].innerHTML=`<b>Temperature:</b> ${faren} °C`;
+        temps[i].innerHTML=`<b>Temperature:</b> ${faren} °F`;
       }
       
     }else{
