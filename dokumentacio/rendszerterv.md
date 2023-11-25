@@ -87,6 +87,7 @@ A projekt elkészülési határideje az oktató által megszabott határidő.
 Maga a program, hozzáféréstől függően bármilyen időpontban futtatható.
 
 ## Erőforrások:
+Célunk, hogy a felület könnyen hozzáférhető legyen. Félévünk végéhez közelítve a terveinkre egyre kevesebb idő jut, így az elsődleges cél, hogy bármely webböngészőn futtatható legyen a program. Jövőbeli terveink között szerepel a mobilos felület javítása, de ez a projekt keretein belül nem valósulhat meg, időhiány miatt.
 
 ## Implementációs terv:
 ### JavaScript
