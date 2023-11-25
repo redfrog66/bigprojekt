@@ -72,7 +72,7 @@ if(isset($_POST['login_btn'])){
      localStorage.setItem('user','$username'); 
      </script>"; 
      echo "<script type='text/JavaScript'>  
-     window.location='index.html'; 
+     window.location='customize.html'; 
      </script>"; 
       
     }else{
