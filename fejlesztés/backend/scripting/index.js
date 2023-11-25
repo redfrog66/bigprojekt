@@ -180,6 +180,7 @@ rl.question('Please enter the town name: ', (town) => {
             document.getElementById("date8").innerHTML=`${day.datetime}`;
             document.getElementById("img8").src=`../frontend/assets/${day.icon}.png`;
           }
+          recommendationUpdate();
 
           /*console.log(`Date: ${day.datetime}, 
                         Temperature: ${day.temp}, 
@@ -194,7 +195,7 @@ rl.question('Please enter the town name: ', (town) => {
     .catch(error => {
       console.log('Error:', error);
     });
-    recommendationUpdate();
+    
 };
 //);
 
@@ -311,8 +312,15 @@ function recommendationUpdate(){
   if(um){}
   if(Math.round(a)<=Math.round(b)){
     document.getElementById("rec").innerText="Take a jacket with you";
+    console.log(a);
+    console.log(b);    
+    console.log("kabát");
   }else{
     document.getElementById("rec").innerText="You might not need a jacket";
+    console.log(a);
+    console.log(b);
+    console.log("no kabát");  
   }
 }
+
 
