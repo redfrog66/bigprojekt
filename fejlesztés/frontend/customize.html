@@ -8,7 +8,7 @@
     <link href="stylesheet.css" rel="stylesheet">
 </head>
 
-<body>
+<body onload="loggedIn()">
     <a href="login.php">
         <button class="btn btn-custom-login text-center">
         👋
@@ -25,19 +25,19 @@
             </td>
             <td>
                 <label class="container">
-                    <input type="checkbox">
-                    <div class="checkmark"></div>
+                    <input type="checkbox" id="umbrellaSetter" onchange="umbrellaSetting()">
+                     <div class="checkmark"></div>
                   </label>
             </td>            
         </tr>
 
         <tr>
-            <td class="text">
+            <td class="text" >
                 Jacket recommendation from:
             </td>
             <td>
-                <input type="range" min="0" max="30" value="20"> 
-                <label class="text">°C</label>
+                <input oninput="tempsetting()" id="tempsetter" type="range" min="0" max="30" value="20"> 
+                <label id="temptext" class="text">°C</label>
             </td>
         </tr>
     </table>
@@ -60,3 +60,26 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 </body>
 </html>
+<script>
+    function loggedIn(){
+    if(localStorage.getItem("user")){
+      console.log(localStorage.getItem("user"));
+      document.getElementById("mainTitle").innerHTML=`Logged in as `+localStorage.getItem("user");
+    }else{
+      console.log("not logged in");
+    }
+  }
+    function tempsetting(){
+        let userForPref=localStorage.getItem("user");
+        let val=document.getElementById("tempsetter").value;
+        document.getElementById("temptext").innerHTML=val+" °C";
+        localStorage.setItem("pref"+userForPref,val);
+    }
+    function umbrellaSetting(){
+        let userUmbr=localStorage.getItem("user");
+        let umVal=document.getElementById('umbrellaSetter').checked;
+        
+        localStorage.setItem("umb"+userUmbr,umVal);
+    }
+
+  </script>

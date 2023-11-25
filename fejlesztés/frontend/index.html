@@ -8,7 +8,7 @@
     <link href="stylesheet.css" rel="stylesheet">
 
 </head>
-<body>
+<body onload="loggedIn()">
     <a href="login.php">
       <button class="btn btn-custom-login text-center">
         🔑
@@ -52,6 +52,10 @@
             <div class="card-header">
               Recommendation
             </div>
+            <div id="rec">
+              
+            </div>
+            
           </div>
         </div>
     </div>
@@ -149,6 +153,9 @@
         Change to °F
       </label>
     </button>
+    <div id="userDisplay">
+      
+    </div>
 
 
 
@@ -158,3 +165,27 @@
     <script src="../backend/scripting/index.js"></script>
   </body>
 </html>
+<script>
+  function loggedIn(){
+  if(localStorage.getItem("user")){
+    console.log(localStorage.getItem("user"));
+    document.getElementById("userDisplay").innerHTML=`Logged in as `+localStorage.getItem("user");
+    recommendationSet();
+  }else{
+    console.log("not logged in");
+  }
+}
+function recommendationSet(){
+  let u=localStorage.getItem("user");
+  let a=document.getElementById("temp1").innerText.split(" ")[1];
+  let b=localStorage.getItem("pref"+u);
+  let um=localStorage.getItem("umb"+u);
+  console.log("recommend");
+  if(um){}
+  if(Math.round(a)<=Math.round(b)){
+    document.getElementById("rec").innerText="Take a jacket with you";
+  }else{
+    document.getElementById("rec").innerText="You might not need a jacket";
+  }
+}
+</script>

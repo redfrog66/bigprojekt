@@ -46,17 +46,19 @@
 </html>
 
 <?php
-$servername = "sql309.infinityfree.com";
-$dbusername = "if0_35448821";
-$dbpassword = "QrNs8vgyPq";
+
+/*$servername = "localhost";//sql309.infinityfree.com
+$dbusername = "root";//if0_35448821
+$dbpassword = "";//QrNs8vgyPq
 try {
-  $conn = new PDO("mysql:host=$servername;port=3306;dbname=if0_35448821_websitelogin", $dbusername, $dbpassword);
+  $conn = new PDO("mysql:websitelogin", $dbusername, $dbpassword);
   // set the PDO error mode to exception
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   echo "Connected successfully";
 } catch(PDOException $e) {
   echo "Connection failed: " . $e->getMessage();
 }
+
 if(isset($_POST['reg_btn'])){
   $username=$_POST['username'];
   $password=$_POST['password'];
@@ -68,8 +70,22 @@ if(isset($_POST['reg_btn'])){
     echo "<script> alert(' . $sql . ' ' . $conn->error. ') </script>";
   }
   $conn->close();
-
-  
-
+  }
+*/
+$conn= mysqli_connect("localhost","root","","websitelogin");
+if(isset($_POST['reg_btn'])){
+  $username=$_POST['username'];
+  $password=$_POST['password'];
+  $name=$_POST['name'];
+  $sql="INSERT INTO logindetails (`id`, `name`, `username`, `password`) VALUES (NULL, '".$name."' , '".$username."','".$password."')";
+  if ($conn->query($sql) === TRUE) {
+    echo "<script> alert('Registration successful'); </script>";
+    header("Location:login.php");
+  } else {
+    echo "<script> alert(' . $sql . ' ' . $conn->error. ') </script>";
+  }
+  $conn->close();
 }
+
+
 ?>

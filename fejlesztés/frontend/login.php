@@ -39,13 +39,14 @@
 </body>
 </html>
 <?php
-//$conn= mysqli_connect("localhost","root","");
+$conn= mysqli_connect("localhost","root","");
 //$conn = mysqli_connect("sql309.infinityfree.com", "if0_35448821", "QrNs8vgyPq","if0_35448821_websitelogin");
-//if (!$conn) {
-  //die("Connection failed: " . mysqli_connect_error());
-//}
-//echo "Connected successfully";
-$servername = "sql309.infinityfree.com";
+if (!$conn) {
+  die("Connection failed: " . mysqli_connect_error());
+}
+echo "Connected successfully";
+
+/*$servername = "sql309.infinityfree.com";
 $username = "if0_35448821";
 $password = "QrNs8vgyPq";
 try {
@@ -56,6 +57,7 @@ try {
 } catch(PDOException $e) {
   echo "Connection failed: " . $e->getMessage();
 }
+*/
 
 
 if(isset($_POST['login_btn'])){
@@ -66,11 +68,19 @@ if(isset($_POST['login_btn'])){
   while($row=mysqli_fetch_assoc($result)){
     $resultPassword=$row['password'];
     if($password==$resultPassword){
-      header('Location:index.html');
+      echo "<script type='text/JavaScript'>  
+     localStorage.setItem('user','$username'); 
+     </script>"; 
+     echo "<script type='text/JavaScript'>  
+     window.location='index.html'; 
+     </script>"; 
+      
     }else{
       echo "<script> alert('Login unsuccessful'); </script>";
     }
   }
+  
+
 
 }
 

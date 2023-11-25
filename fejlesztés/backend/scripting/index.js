@@ -181,19 +181,20 @@ rl.question('Please enter the town name: ', (town) => {
             document.getElementById("img8").src=`../frontend/assets/${day.icon}.png`;
           }
 
-
-          console.log(`Date: ${day.datetime}, 
+          /*console.log(`Date: ${day.datetime}, 
                         Temperature: ${day.temp}, 
                         Humidity: ${day.humidity}, 
                         Icon: ${day.icon}, 
                         Wind speed: ${day.windspeed}, 
-                        Pressure: ${day.pressure} `);
+                        Pressure: ${day.pressure} `); */
                   });
+          
       }
     })
     .catch(error => {
       console.log('Error:', error);
     });
+    recommendationUpdate();
 };
 //);
 
@@ -301,3 +302,17 @@ function convertKulon(){
     }
   }
 }
+function recommendationUpdate(){
+  let u=localStorage.getItem("user");
+  let a=document.getElementById("temp1").innerText.split(" ")[1];
+  let b=localStorage.getItem("pref"+u);
+  let um=localStorage.getItem("umb"+u);
+  console.log("recommend");
+  if(um){}
+  if(Math.round(a)<=Math.round(b)){
+    document.getElementById("rec").innerText="Take a jacket with you";
+  }else{
+    document.getElementById("rec").innerText="You might not need a jacket";
+  }
+}
+
