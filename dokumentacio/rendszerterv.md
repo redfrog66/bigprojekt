@@ -17,19 +17,12 @@ A User megnyitja a webapplikációt. Letisztult és szép felület várja, könn
 
 ### Hőmérséklet
 A legfontosabb része a felületnek. Az adatokat API segítségével kapjuk meg, így a felületen csak megjelenítjük. A hőmérsékletet fokban adjuk meg, de lehetőség van átváltani Fahrenheitre is. 
-#TODO
-### Szél és páratartalom
-Szintén API segítségével jutunk hozzá az információkhoz. A szélsebességet méter per másodpercben, a páratartalmat százalékban adjuk meg.
+
+### Nyomás és páratartalom
+Szintén API segítségével jutunk hozzá az információkhoz. A nyomást millibárban, a páratartalmat százalékban adjuk meg.
 
 ### Öltözködési tanácsok
-A hőmérséklet, szélsebesség és páratartalom alapján megmondjuk, hogy milyen ruhát érdemes felvenni. A tanácsokat a következőképpen adjuk meg:
-- 0-10 fok: Viseljen sapkát!
-- 10-20 fok: Vigyen kabátot!
-- 30-40 fok: Viseljen naptejet!
-
-Nagy szél esetén:
-- 0-10 m/s: Vigyen kabátot!
-- 10-20 m/s: Viseljen sapkát!
+A bejelentkezés után elérhető funkció.
 
 ### Regisztráció
 A Usernek lehetősége van regisztrálni. Itt megad megszólítást, email címét, jelszavát, illetve választhat alapértelmezett várost. A regisztráció után a User bejelentkezik.
@@ -39,8 +32,6 @@ A User bejelentkezik, megadja email címét és jelszavát. Ha sikeres volt a be
 
 ### Személyreszabás
 Nem mindenki várja meg a 30 fokot a naptejjel, vagy a 10-et, hogy sapkát hordjon, de egy emlékeztető mégis hasznos. Ezért a felhasználó beállíthatja, hogy az öltözködést segítő üzenetek mikor jelenjenek meg. A beállításokat a Fiók gomb alatt találja meg a User.
-
-Elmenthet városokat is, az alapértelmezetten felül. Ez gyorsítja a felhasználói élményt, hiszen nem kell minden alkalommal megadnia a várost, ahol tartózkodik, ki tudja választani a listából.
 
 ### Átváltás Fahrenheitre
 Előreláthatólag egy gomb fogja megvalósítani, hogy a napi hőmérséklet Fahrenheitben is megjelenjen. A gomb megnyomásával a hőmérséklet átváltódik Fahrenheitre, a gomb újra megnyomásával pedig vissza Celsiusra.
@@ -134,7 +125,6 @@ A követelménylistánk a következő:
 | Statisztika | S1  | Napi időjárás     | 1.0 | Napi időjárás kimutatása |
 | Statisztika | S2  | Hét napos időjárás| 1.0 | Hét nap időjárásának kimutatása              |
 | Statisztika | S3  | Korábbi adatok | 1.0 | Az elmúlt 30 nap adatai az adott napra vonatkozóan kimutatva              |
-| Jogosultság | L2  | Mentett városok közötti váltás|1.0 | Mentett városok listájából kiválasztani a kívántat|
 
 Az ehhez szükséges elemek:
 | Név               | V   | Szükséges elem                                       |
@@ -147,7 +137,6 @@ Az ehhez szükséges elemek:
 | Napi időjárás     | 1.0 | Kijelző és ehhez tartozó adatbázis |
 | Hét napos időjárás| 1.0 | Kijelző és ehhez tartozó adatbázis |
 | Korábbi adatok | 1.0 | Kijelző és ehhez tartozó adatbázis |
-| Mentett városok közötti váltás|1.0 | Lista és gomb |
 
 
 ## 3. Felület kinézetének tesztelése
